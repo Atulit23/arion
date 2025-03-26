@@ -1,0 +1,212 @@
+{
+    "1": [
+        {
+            "question": "What is the primary purpose of the forward diffusion process in training a diffusion model?",
+            "options": [
+                "To add noise over several steps to the image",
+                "To predict the noise added to the image",
+                "To generate a clean image from noise",
+                "To compare predicted noise with actual noise"
+            ],
+            "answer": "To add noise over several steps to the image"
+        },
+        {
+            "question": "What is the role of the neural network during the forward diffusion process?",
+            "options": [
+                "To generate new images from noise",
+                "To predict the noise added at each timestep",
+                "To calculate the gradient descent for loss minimization",
+                "To apply the reverse diffusion process"
+            ],
+            "answer": "To predict the noise added at each timestep"
+        },
+        {
+            "question": "How is the loss function in training a diffusion model calculated?",
+            "options": [
+                "By comparing the predicted image with the original image",
+                "By comparing the predicted noise to the actual noise added",
+                "By comparing the predicted clean image with Gaussian noise",
+                "By measuring the difference between generated and actual data"
+            ],
+            "answer": "By comparing the predicted noise to the actual noise added"
+        },
+        {
+            "question": "What is the initial state for image generation in a trained diffusion model?",
+            "options": [
+                "A clean image",
+                "A noisy image",
+                "Gaussian noise",
+                "The loss function"
+            ],
+            "answer": "Gaussian noise"
+        }
+    ],
+    "2": [
+        {
+            "question": "What is the main goal of the reverse diffusion process?",
+            "options": [
+                "To add more noise to the image",
+                "To recover the original image from its noisy version",
+                "To create random images",
+                "To increase the complexity of the model"
+            ],
+            "answer": "To recover the original image from its noisy version"
+        },
+        {
+            "question": "What is the role of the neural network \u03f5\u03b8(x\u209c, t) in the reverse diffusion process?",
+            "options": [
+                "To generate a clean image directly",
+                "To predict the noise at each timestep",
+                "To add noise to the image",
+                "To minimize the error in image generation"
+            ],
+            "answer": "To predict the noise at each timestep"
+        },
+        {
+            "question": "What is the Evidence Lower Bound (ELBO) used for in the training process?",
+            "options": [
+                "To predict the image itself",
+                "To predict the added noise during diffusion",
+                "To increase the model's complexity",
+                "To evaluate the model's performance"
+            ],
+            "answer": "To predict the added noise during diffusion"
+        },
+        {
+            "question": "Why is the denoising step important in the reverse diffusion process?",
+            "options": [
+                "It helps generate the clean image by removing noise",
+                "It adds additional noise to the image",
+                "It trains the model to generate random noise",
+                "It increases the resolution of the image"
+            ],
+            "answer": "It helps generate the clean image by removing noise"
+        }
+    ],
+    "5": [
+        {
+            "question": "What is the first step in the reverse diffusion process?",
+            "options": [
+                "Add Gaussian noise",
+                "Subtract the predicted noise",
+                "Generate a clean image",
+                "Perform forward diffusion"
+            ],
+            "answer": "Subtract the predicted noise"
+        },
+        {
+            "question": "How many steps are typically involved in the reverse diffusion process?",
+            "options": [
+                "10 steps",
+                "100 steps",
+                "500 steps",
+                "1000 steps"
+            ],
+            "answer": "1000 steps"
+        },
+        {
+            "question": "What is the role of the neural network in the reverse diffusion process?",
+            "options": [
+                "It predicts the image at each step",
+                "It predicts the noise added at each step",
+                "It adds Gaussian noise randomly",
+                "It cleans the image directly"
+            ],
+            "answer": "It predicts the noise added at each step"
+        },
+        {
+            "question": "What maintains the stochasticity in the reverse diffusion process?",
+            "options": [
+                "Subtraction of the predicted noise",
+                "Addition of fresh Gaussian noise",
+                "Prediction of the clean image",
+                "Gradual transformation to a clean image"
+            ],
+            "answer": "Addition of fresh Gaussian noise"
+        }
+    ],
+    "4": [
+        {
+            "question": "What is the main goal of the training process in generative models like diffusion models?",
+            "options": [
+                "To maximize the likelihood of the data directly",
+                "To minimize the reconstruction loss",
+                "To maximize the log-likelihood of the data",
+                "To predict the image directly"
+            ],
+            "answer": "To maximize the log-likelihood of the data"
+        },
+        {
+            "question": "Which inequality is used to derive the lower bound in generative models?",
+            "options": [
+                "Cauchy-Schwarz Inequality",
+                "H\u00f6lder\u2019s Inequality",
+                "Jensen\u2019s Inequality",
+                "Young\u2019s Inequality"
+            ],
+            "answer": "Jensen\u2019s Inequality"
+        },
+        {
+            "question": "What are the three primary loss components involved in training a generative model like a diffusion model?",
+            "options": [
+                "Reconstruction loss, KL divergence, and prior matching loss",
+                "Reconstruction loss, entropy loss, and KL divergence",
+                "Prior matching loss, data matching loss, and reconstruction loss",
+                "KL divergence, reconstruction loss, and regularization loss"
+            ],
+            "answer": "Reconstruction loss, KL divergence, and prior matching loss"
+        },
+        {
+            "question": "What does the KL divergence between Gaussian distributions simplify to in generative models?",
+            "options": [
+                "It has a closed-form solution",
+                "It cannot be calculated in closed form",
+                "It approximates the log-likelihood",
+                "It is irrelevant to the model\u2019s training objective"
+            ],
+            "answer": "It has a closed-form solution"
+        }
+    ],
+    "3": [
+        {
+            "question": "What is required to begin the training of diffusion models?",
+            "options": [
+                "A dataset of text data",
+                "A dataset of images, such as cats",
+                "A dataset of sound data",
+                "A dataset of video data"
+            ],
+            "answer": "A dataset of images, such as cats"
+        },
+        {
+            "question": "What does the noise schedule \u03b2\u209c define in the forward diffusion process?",
+            "options": [
+                "The amount of noise added at each step",
+                "The number of images to be processed",
+                "The type of model used for diffusion",
+                "The size of the dataset"
+            ],
+            "answer": "The amount of noise added at each step"
+        },
+        {
+            "question": "Which term scales down the image as noise increases in the forward diffusion process?",
+            "options": [
+                "\u03b2\u209cI",
+                "\u221a(1 \u2212 \u03b2\u209c)",
+                "T",
+                "x \u2208 R\u00b3\u02e3\u00b2\u2075\u2076\u02e3\u00b2\u2075\u2076"
+            ],
+            "answer": "\u221a(1 \u2212 \u03b2\u209c)"
+        },
+        {
+            "question": "What is a key feature of the diffusion process during training?",
+            "options": [
+                "Sequential sampling from each step",
+                "Jumping to any timestep t directly",
+                "Random noise addition without a schedule",
+                "Adding noise only at the final timestep"
+            ],
+            "answer": "Jumping to any timestep t directly"
+        }
+    ]
+}

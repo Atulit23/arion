@@ -1,0 +1,254 @@
+.learn__container {
+  width: 75%;
+  height: 100vh;
+}
+
+.learn__middle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.learn__header {
+  display: flex;
+  background-color: #58cc02;
+  width: 50%;
+  padding: 1rem 2rem;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.learn__header > span {
+  color: #52656d;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.top > span {
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+}
+
+.top > img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-right: 0.7rem;
+}
+
+.learn__header > span {
+  color: white;
+}
+
+.levels {
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.levels::-webkit-scrollbar {
+  display: none;
+}
+
+.current__level {
+  width: 50%;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.current__level > span {
+  text-align: start;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1.5rem;
+  width: 80%;
+}
+
+.active__button {
+  background-color: #93d333;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.active__button > img {
+  width: 32px;
+  height: 32px;
+  margin-left: 0.1rem;
+}
+
+.inactive__button {
+  background-color: #37464f;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inactive__button > img {
+  width: 22px;
+  height: 22px;
+  margin-left: 0.3rem;
+}
+
+.current__lesson {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current__lesson__middle {
+  height: 86%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tqdm__main__c {
+  width: 100%;
+}
+
+.tqdm__outer__c {
+  width: 100%;
+  background-color: #131f24;
+  border-radius: 10px;
+  padding: 2px;
+  height: 20px;
+}
+
+.tqdm__inner__c {
+  height: 100%;
+  background-color: #93d333;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.current__lesson__top {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cross > img {
+  width: 28px;
+  height: 28px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.level__title { 
+  margin-top: 3rem;
+}
+
+.level__title > span{
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.level__content {
+  margin-top: 4rem;
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.level__content::-webkit-scrollbar {
+  display: none;
+}
+
+.level__content > span {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.lc__text {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.bottom {
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid grey;
+  margin-top: 2vh;
+}
+
+.previous {
+  background-color: #93d333;
+  padding: 0.9rem 1rem;
+  width: 10rem;
+  margin-right: 25%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.next {
+  background-color: #93d333;
+  padding: 0.9rem 1rem;
+  width: 10rem;
+  margin-left: 25%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.previous > span {
+  color: black;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.next > span {
+  color: black;
+  font-size: 0.95rem;
+  font-weight: bold;
+}

@@ -1,0 +1,380 @@
+{
+    "1": [
+        {
+            "question": "Which of the following mathematical concepts are essential for understanding Machine Learning algorithms?",
+            "options": [
+                "Linear Algebra, Statistics, and Probability",
+                "Chemistry and Biology",
+                "Geometry and Trigonometry",
+                "Algebra and Calculus"
+            ],
+            "answer": "Linear Algebra, Statistics, and Probability"
+        },
+        {
+            "question": "What is a vector in the context of Machine Learning?",
+            "options": [
+                "A collection of numbers arranged in rows and columns",
+                "An ordered list of numbers",
+                "A type of matrix",
+                "A machine learning algorithm"
+            ],
+            "answer": "An ordered list of numbers"
+        },
+        {
+            "question": "Which of the following Machine Learning algorithms rely on mathematical concepts like Linear Algebra?",
+            "options": [
+                "Linear Regression, Naive Bayes, and Decision Trees",
+                "K-Means Clustering and Neural Networks",
+                "Support Vector Machines and Random Forests",
+                "Logistic Regression and Gradient Descent"
+            ],
+            "answer": "Linear Regression, Naive Bayes, and Decision Trees"
+        },
+        {
+            "question": "What is a matrix in the context of Machine Learning?",
+            "options": [
+                "A collection of ordered numbers",
+                "A collection of numbers arranged in rows and columns",
+                "An ordered list of numbers",
+                "A method of model evaluation"
+            ],
+            "answer": "A collection of numbers arranged in rows and columns"
+        }
+    ],
+    "2": [
+        {
+            "question": "What is a vector commonly used to represent in Machine Learning?",
+            "options": [
+                "A 2D collection of numbers",
+                "Features of an image or data points",
+                "Eigenvalues and eigenvectors",
+                "Linear transformations"
+            ],
+            "answer": "Features of an image or data points"
+        },
+        {
+            "question": "What operation measures the similarity between two vectors?",
+            "options": [
+                "Scalar multiplication",
+                "Matrix multiplication",
+                "Dot product",
+                "Matrix transposition"
+            ],
+            "answer": "Dot product"
+        },
+        {
+            "question": "In machine learning, what does a matrix typically represent?",
+            "options": [
+                "Directions in space",
+                "A 2D collection of numbers",
+                "Weights in a model",
+                "A dataset's samples and features"
+            ],
+            "answer": "A dataset's samples and features"
+        },
+        {
+            "question": "What is the key concept in matrix theory that helps in dimensionality reduction techniques like PCA?",
+            "options": [
+                "Dot product",
+                "Eigenvalues and eigenvectors",
+                "Matrix multiplication",
+                "Matrix addition"
+            ],
+            "answer": "Eigenvalues and eigenvectors"
+        }
+    ],
+    "3": [
+        {
+            "question": "What does Bayes' Theorem help us reverse in probability theory?",
+            "options": [
+                "Conditional probabilities",
+                "Mean values",
+                "Variance",
+                "Gaussian distributions"
+            ],
+            "answer": "Conditional probabilities"
+        },
+        {
+            "question": "What is the mean (expectation) when rolling a fair die with outcomes {1, 2, 3, 4, 5, 6}?",
+            "options": [
+                "3",
+                "3.5",
+                "4",
+                "5"
+            ],
+            "answer": "3.5"
+        },
+        {
+            "question": "Which of the following models commonly uses Bayes' Theorem?",
+            "options": [
+                "Na\u00efve Bayes Classifiers",
+                "Decision Trees",
+                "Support Vector Machines",
+                "K-Nearest Neighbors"
+            ],
+            "answer": "Na\u00efve Bayes Classifiers"
+        },
+        {
+            "question": "What does variance measure in statistical analysis?",
+            "options": [
+                "Central tendency",
+                "Spread or variability of values",
+                "Mean value",
+                "Gaussian distribution"
+            ],
+            "answer": "Spread or variability of values"
+        }
+    ],
+    "4": [
+        {
+            "question": "What is the purpose of multiple linear regression?",
+            "options": [
+                "To predict a dependent variable using one independent variable",
+                "To predict a dependent variable using multiple independent variables",
+                "To measure the error in predictions",
+                "To calculate the R\u00b2 score of a model"
+            ],
+            "answer": "To predict a dependent variable using multiple independent variables"
+        },
+        {
+            "question": "What does the R\u00b2 score indicate in a regression model?",
+            "options": [
+                "The total error in predictions",
+                "How well the model fits the data",
+                "The sum of the squared errors",
+                "The number of independent variables used"
+            ],
+            "answer": "How well the model fits the data"
+        },
+        {
+            "question": "Which of the following metrics measures the average of the absolute errors?",
+            "options": [
+                "Mean Squared Error (MSE)",
+                "Mean Absolute Error (MAE)",
+                "R\u00b2 score",
+                "Adjusted R\u00b2 score"
+            ],
+            "answer": "Mean Absolute Error (MAE)"
+        },
+        {
+            "question": "What does a perfect R\u00b2 score of 1 signify?",
+            "options": [
+                "The model has no predictive power",
+                "The model perfectly fits the data",
+                "The model has an average error",
+                "The model uses only one independent variable"
+            ],
+            "answer": "The model perfectly fits the data"
+        }
+    ],
+    "5": [
+        {
+            "question": "What does the dependent variable represent in regression analysis?",
+            "options": [
+                "The feature used to predict the value",
+                "The output or value being predicted or explained",
+                "The rate of change between variables",
+                "The intercept when X is zero"
+            ],
+            "answer": "The output or value being predicted or explained"
+        },
+        {
+            "question": "What is the role of the independent variable in regression analysis?",
+            "options": [
+                "It is the output or value being predicted",
+                "It is the feature used to predict the dependent variable",
+                "It represents the slope of the line",
+                "It is the value of Y when X is zero"
+            ],
+            "answer": "It is the feature used to predict the dependent variable"
+        },
+        {
+            "question": "In multiple linear regression, what does each feature have associated with it?",
+            "options": [
+                "An intercept",
+                "A rate of change",
+                "A coefficient \u03b2",
+                "A value of Y when X is zero"
+            ],
+            "answer": "A coefficient \u03b2"
+        },
+        {
+            "question": "In the equation of a line for regression, what does the slope (m) represent?",
+            "options": [
+                "The intercept when X is zero",
+                "The rate of change of Y with respect to X",
+                "The value of Y when X is zero",
+                "The coefficient learned during training"
+            ],
+            "answer": "The rate of change of Y with respect to X"
+        }
+    ],
+    "7": [
+        {
+            "question": "What is the formula for calculating the posterior probability in the Na\u00efve Bayes theorem?",
+            "options": [
+                "P(Y\u2223X) = P(X\u2223Y) * P(Y) / P(X)",
+                "P(Y\u2223X) = P(Y) / P(X)",
+                "P(Y\u2223X) = P(X\u2223Y) + P(Y) - P(X)",
+                "P(Y\u2223X) = P(X) * P(Y)"
+            ],
+            "answer": "P(Y\u2223X) = P(X\u2223Y) * P(Y) / P(X)"
+        },
+        {
+            "question": "What assumption does the Na\u00efve Bayes model make about the features?",
+            "options": [
+                "The features are conditionally dependent on the class.",
+                "The features are conditionally independent given the class.",
+                "The features have no relationship to the class.",
+                "The features are all correlated."
+            ],
+            "answer": "The features are conditionally independent given the class."
+        },
+        {
+            "question": "Why is the Na\u00efve Bayes model computationally efficient?",
+            "options": [
+                "Because it ignores the prior probability.",
+                "Because it assumes features are conditionally independent given the class.",
+                "Because it calculates the posterior probability without considering the evidence.",
+                "Because it uses complex algorithms for each class."
+            ],
+            "answer": "Because it assumes features are conditionally independent given the class."
+        },
+        {
+            "question": "Which of the following tasks is Na\u00efve Bayes commonly used for?",
+            "options": [
+                "Image processing",
+                "Text classification",
+                "Video processing",
+                "Audio analysis"
+            ],
+            "answer": "Text classification"
+        }
+    ],
+    "8": [
+        {
+            "question": "What type of data does Gaussian Na\u00efve Bayes model work with?",
+            "options": [
+                "Continuous data",
+                "Binary data",
+                "Categorical data",
+                "Nominal data"
+            ],
+            "answer": "Continuous data"
+        },
+        {
+            "question": "Which distribution does Gaussian Na\u00efve Bayes assume for each feature X\u1d62 in each class Y?",
+            "options": [
+                "Poisson distribution",
+                "Bernoulli distribution",
+                "Gaussian (Normal) distribution",
+                "Exponential distribution"
+            ],
+            "answer": "Gaussian (Normal) distribution"
+        },
+        {
+            "question": "For which type of data is Bernoulli Na\u00efve Bayes model used?",
+            "options": [
+                "Continuous data",
+                "Nominal data",
+                "Binary data",
+                "Multinomial data"
+            ],
+            "answer": "Binary data"
+        },
+        {
+            "question": "What is the purpose of taking the logarithm of the likelihood in Na\u00efve Bayes models?",
+            "options": [
+                "To make the model more complex",
+                "To avoid computational underflow",
+                "To speed up the computations",
+                "To simplify the computations"
+            ],
+            "answer": "To avoid computational underflow"
+        }
+    ],
+    "9": [
+        {
+            "question": "What does entropy measure in decision tree algorithms?",
+            "options": [
+                "The variance in the dataset",
+                "The uncertainty or impurity within the dataset",
+                "The class distribution of the dataset",
+                "The information gain from a split"
+            ],
+            "answer": "The uncertainty or impurity within the dataset"
+        },
+        {
+            "question": "Which of the following formulas is used to calculate entropy in decision trees?",
+            "options": [
+                "Shannon's entropy formula",
+                "Mean Squared Error formula",
+                "Gini Index formula",
+                "Information Gain formula"
+            ],
+            "answer": "Shannon's entropy formula"
+        },
+        {
+            "question": "What does the Information Gain (IG) measure in decision tree algorithms?",
+            "options": [
+                "The level of uncertainty in the dataset",
+                "How much entropy is reduced after a split",
+                "The impurity of a dataset before splitting",
+                "The class distribution of the data"
+            ],
+            "answer": "How much entropy is reduced after a split"
+        },
+        {
+            "question": "What is the Gini Index used to evaluate?",
+            "options": [
+                "The variance in a dataset",
+                "The likelihood of misclassification in a dataset",
+                "The class distribution in a dataset",
+                "The expected information required for classification"
+            ],
+            "answer": "The likelihood of misclassification in a dataset"
+        }
+    ],
+    "10": [
+        {
+            "question": "Which library is commonly used for implementing decision trees in practice?",
+            "options": [
+                "TensorFlow",
+                "scikit-learn",
+                "PyTorch",
+                "Keras"
+            ],
+            "answer": "scikit-learn"
+        },
+        {
+            "question": "What criterion is used in the given example for training the decision tree classifier?",
+            "options": [
+                "Information Gain",
+                "Gini Index",
+                "Chi-square",
+                "Mean Squared Error"
+            ],
+            "answer": "Gini Index"
+        },
+        {
+            "question": "What function is used to visualize the decision tree in the example?",
+            "options": [
+                "plot_graph",
+                "plot_tree",
+                "visualize_tree",
+                "draw_tree"
+            ],
+            "answer": "plot_tree"
+        },
+        {
+            "question": "Which dataset is used in the example to train the decision tree classifier?",
+            "options": [
+                "MNIST",
+                "Iris",
+                "CIFAR-10",
+                "Wine"
+            ],
+            "answer": "Iris"
+        }
+    ]
+}

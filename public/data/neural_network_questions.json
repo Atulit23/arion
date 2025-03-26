@@ -1,0 +1,212 @@
+{
+    "1": [
+        {
+            "question": "What is a neural network inspired by?",
+            "options": [
+                "Human brain",
+                "Computer algorithms",
+                "Mathematical models",
+                "Geometric shapes"
+            ],
+            "answer": "Human brain"
+        },
+        {
+            "question": "Which task can neural networks be used for?",
+            "options": [
+                "Data encryption",
+                "Regression and classification",
+                "Data storage",
+                "Code compilation"
+            ],
+            "answer": "Regression and classification"
+        },
+        {
+            "question": "Which of the following is essential in building a neural network?",
+            "options": [
+                "Neurons, layers, and biases",
+                "CPU power",
+                "Cloud storage",
+                "Data mining tools"
+            ],
+            "answer": "Neurons, layers, and biases"
+        },
+        {
+            "question": "Which libraries are commonly used to implement neural networks?",
+            "options": [
+                "TensorFlow and PyTorch",
+                "Visual Studio and Eclipse",
+                "Unity and Unreal Engine",
+                "Windows and Linux"
+            ],
+            "answer": "TensorFlow and PyTorch"
+        }
+    ],
+    "2": [
+        {
+            "question": "What is the role of activation functions in a neural network?",
+            "options": [
+                "They represent the importance of each input.",
+                "They adjust outputs to improve predictions.",
+                "They control whether a neuron activates based on input values.",
+                "They measure how far predictions are from the actual result."
+            ],
+            "answer": "They control whether a neuron activates based on input values."
+        },
+        {
+            "question": "Which of the following layers is responsible for making predictions in a neural network?",
+            "options": [
+                "Input layer",
+                "Hidden layers",
+                "Output layer",
+                "Bias layer"
+            ],
+            "answer": "Output layer"
+        },
+        {
+            "question": "What does the loss function in a neural network do?",
+            "options": [
+                "It adjusts weights and biases during backward propagation.",
+                "It measures how far predictions are from the actual result.",
+                "It controls whether a neuron activates based on input values.",
+                "It processes input data and passes it to the next layer."
+            ],
+            "answer": "It measures how far predictions are from the actual result."
+        },
+        {
+            "question": "Which process in a neural network involves adjusting weights and biases based on the error calculated from the loss function?",
+            "options": [
+                "Forward propagation",
+                "Backward propagation",
+                "Epoch adjustment",
+                "Neural feedback"
+            ],
+            "answer": "Backward propagation"
+        }
+    ],
+    "3": [
+        {
+            "question": "What is the output of the neuron after applying the ReLU activation function?",
+            "options": [
+                "0.1",
+                "2.6",
+                "0",
+                "3.0"
+            ],
+            "answer": "2.6"
+        },
+        {
+            "question": "What does the ReLU activation function do when the input sum is greater than 0?",
+            "options": [
+                "Sets the output to 0",
+                "Passes the value as it is",
+                "Applies a small slope",
+                "Normalizes the value"
+            ],
+            "answer": "Passes the value as it is"
+        },
+        {
+            "question": "What does the Softmax function do in a neural network?",
+            "options": [
+                "Converts logits into probabilities",
+                "Applies a slope to negative values",
+                "Calculates the weighted sum",
+                "Multiplies inputs by weights"
+            ],
+            "answer": "Converts logits into probabilities"
+        },
+        {
+            "question": "How does Leaky ReLU differ from standard ReLU?",
+            "options": [
+                "It allows negative values to pass unchanged",
+                "It allows a small slope for negative values",
+                "It only allows positive values",
+                "It converts logits into probabilities"
+            ],
+            "answer": "It allows a small slope for negative values"
+        }
+    ],
+    "4": [
+        {
+            "question": "What does a small learning rate in a neural network result in?",
+            "options": [
+                "Faster training",
+                "Precise adjustments but slower training",
+                "Overshooting the optimal solution",
+                "Instability"
+            ],
+            "answer": "Precise adjustments but slower training"
+        },
+        {
+            "question": "What is the main advantage of using a larger learning rate in a neural network?",
+            "options": [
+                "More precise adjustments",
+                "Slower training but more accuracy",
+                "Faster training but may overshoot the optimal solution",
+                "Prevents local minima"
+            ],
+            "answer": "Faster training but may overshoot the optimal solution"
+        },
+        {
+            "question": "What is the role of momentum in a neural network?",
+            "options": [
+                "It decreases the learning rate over time",
+                "It helps the network avoid getting stuck in local minima and improves convergence",
+                "It makes the training process slower",
+                "It decreases the number of layers in the network"
+            ],
+            "answer": "It helps the network avoid getting stuck in local minima and improves convergence"
+        },
+        {
+            "question": "Which algorithms dynamically adjust the learning rate during training?",
+            "options": [
+                "Adam and RMSProp",
+                "SGD and Perceptron",
+                "Gradient Descent and Linear Regression",
+                "ReLU and Tanh"
+            ],
+            "answer": "Adam and RMSProp"
+        }
+    ],
+    "5": [
+        {
+            "question": "What is the purpose of the softmax function?",
+            "options": [
+                "To convert probabilities into logits",
+                "To normalize logits into probabilities",
+                "To calculate the loss function",
+                "To prevent overfitting in the model"
+            ],
+            "answer": "To normalize logits into probabilities"
+        },
+        {
+            "question": "Which function is commonly used to measure the difference between actual and predicted values in machine learning?",
+            "options": [
+                "ReLU",
+                "Softmax",
+                "Cross-entropy loss",
+                "Sigmoid"
+            ],
+            "answer": "Cross-entropy loss"
+        },
+        {
+            "question": "What is the purpose of clipping predicted values in the cross-entropy loss implementation?",
+            "options": [
+                "To normalize the probabilities",
+                "To prevent log of zero",
+                "To optimize the model's performance",
+                "To calculate the gradients"
+            ],
+            "answer": "To prevent log of zero"
+        },
+        {
+            "question": "How is the derivative of the cross-entropy loss function used in backpropagation?",
+            "options": [
+                "It simplifies the gradient calculation for weight updates",
+                "It normalizes the logits",
+                "It converts probabilities to logits",
+                "It averages the loss over samples"
+            ],
+            "answer": "It simplifies the gradient calculation for weight updates"
+        }
+    ]
+}

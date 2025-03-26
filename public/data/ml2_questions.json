@@ -1,0 +1,508 @@
+{
+    "1": [
+        {
+            "question": "What is the primary goal of Maximum Likelihood Estimation (MLE)?",
+            "options": [
+                "To estimate the parameters of a probability distribution by minimizing the likelihood of observed data",
+                "To estimate the parameters of a probability distribution by maximizing the likelihood of observed data",
+                "To calculate the mean and variance of a sample",
+                "To predict future data points based on observed data"
+            ],
+            "answer": "To estimate the parameters of a probability distribution by maximizing the likelihood of observed data"
+        },
+        {
+            "question": "Which of the following is the result stated by the Central Limit Theorem (CLT)?",
+            "options": [
+                "The sample mean of a large enough sample from any distribution will approximate a normal distribution",
+                "The sample mean of a small enough sample from any distribution will approximate a normal distribution",
+                "The variance of any distribution will always be the same",
+                "The mean of any distribution will always be the same"
+            ],
+            "answer": "The sample mean of a large enough sample from any distribution will approximate a normal distribution"
+        },
+        {
+            "question": "What does the Bias-Variance Tradeoff explain in terms of model generalization?",
+            "options": [
+                "Bias causes underfitting, and variance causes overfitting",
+                "Bias causes overfitting, and variance causes underfitting",
+                "Bias and variance are unrelated to model generalization",
+                "Bias and variance both cause underfitting"
+            ],
+            "answer": "Bias causes underfitting, and variance causes overfitting"
+        },
+        {
+            "question": "What is the purpose of a derivative in calculus?",
+            "options": [
+                "To describe how functions change with respect to variables",
+                "To calculate the area under a curve",
+                "To find the mean of a function",
+                "To estimate the parameters of a distribution"
+            ],
+            "answer": "To describe how functions change with respect to variables"
+        }
+    ],
+    "2": [
+        {
+            "question": "What does the derivative of a function measure?",
+            "options": [
+                "The rate of change of the function",
+                "The maximum value of the function",
+                "The minimum value of the function",
+                "The second derivative of the function"
+            ],
+            "answer": "The rate of change of the function"
+        },
+        {
+            "question": "Which rule is used to differentiate the sum of two functions?",
+            "options": [
+                "Product Rule",
+                "Quotient Rule",
+                "Chain Rule",
+                "Sum Rule"
+            ],
+            "answer": "Sum Rule"
+        },
+        {
+            "question": "What is the formula for the Power Rule?",
+            "options": [
+                "f'(x) = n * x^(n-1)",
+                "f'(x) = x^n",
+                "f'(x) = n * x^n",
+                "f'(x) = x^(n-1)"
+            ],
+            "answer": "f'(x) = n * x^(n-1)"
+        },
+        {
+            "question": "When is the Chain Rule applied?",
+            "options": [
+                "For differentiating products of functions",
+                "For differentiating quotients of functions",
+                "For differentiating composite functions",
+                "For differentiating sums of functions"
+            ],
+            "answer": "For differentiating composite functions"
+        }
+    ],
+    "9": [
+        {
+            "question": "What is the goal in the context of Support Vector Machines (SVM)?",
+            "options": [
+                "Maximize the margin between the classes",
+                "Minimize the margin between the classes",
+                "Maximize the number of support vectors",
+                "Minimize the number of support vectors"
+            ],
+            "answer": "Maximize the margin between the classes"
+        },
+        {
+            "question": "What are support vectors in SVM?",
+            "options": [
+                "The data points closest to the decision boundary",
+                "The data points farthest from the decision boundary",
+                "The points where the margin is widest",
+                "The points lying on the hyperplane"
+            ],
+            "answer": "The data points closest to the decision boundary"
+        },
+        {
+            "question": "How is the margin in SVM mathematically represented?",
+            "options": [
+                "2 / \u2225w\u2225",
+                "\u2225w\u2225 / 2",
+                "2 * \u2225w\u2225",
+                "\u2225w\u2225^2"
+            ],
+            "answer": "2 / \u2225w\u2225"
+        },
+        {
+            "question": "What does minimizing \u2225w\u2225 in SVM help achieve?",
+            "options": [
+                "It reduces overfitting by increasing the margin",
+                "It increases the complexity of the model",
+                "It increases the number of support vectors",
+                "It reduces the generalization ability of the model"
+            ],
+            "answer": "It reduces overfitting by increasing the margin"
+        }
+    ],
+    "10": [
+        {
+            "question": "Why do we minimize 1/2 \u2225w\u2225\u00b2 instead of \u2225w\u2225 directly?",
+            "options": [
+                "To make the optimization process simpler by eliminating the absolute value",
+                "To make the function non-convex",
+                "To increase the complexity of the optimization",
+                "To avoid the Lagrangian formulation"
+            ],
+            "answer": "To make the optimization process simpler by eliminating the absolute value"
+        },
+        {
+            "question": "What is a key benefit of using 1/2 \u2225w\u2225\u00b2 for optimization?",
+            "options": [
+                "It leads to a non-convex function",
+                "It simplifies the optimization process and makes the function quadratic",
+                "It makes the function harder to optimize",
+                "It avoids using derivatives in optimization"
+            ],
+            "answer": "It simplifies the optimization process and makes the function quadratic"
+        },
+        {
+            "question": "What is consistent with minimizing 1/2 \u2225w\u2225\u00b2?",
+            "options": [
+                "The Lagrangian formulation",
+                "The non-convex optimization method",
+                "Maximizing the margin",
+                "Maximizing the function's complexity"
+            ],
+            "answer": "The Lagrangian formulation"
+        }
+    ],
+    "11": [
+        {
+            "question": "What is the key concept behind Support Vector Machines (SVM)?",
+            "options": [
+                "Minimizing the margin between the classes",
+                "Maximizing the margin between the classes",
+                "Maximizing the number of features",
+                "Minimizing the number of features"
+            ],
+            "answer": "Maximizing the margin between the classes"
+        },
+        {
+            "question": "What is the role of a polynomial kernel of degree 2 (d=2) in SVM?",
+            "options": [
+                "It transforms the input space to make it linearly separable in a higher-dimensional space",
+                "It reduces the number of features in the input space",
+                "It creates a cubic decision boundary",
+                "It makes the data separable in lower dimensions"
+            ],
+            "answer": "It transforms the input space to make it linearly separable in a higher-dimensional space"
+        },
+        {
+            "question": "For what scenario would you use a kernel degree of 3 (d=3) in SVM?",
+            "options": [
+                "To create a quadratic decision boundary",
+                "To create a cubic decision boundary",
+                "To reduce the computational complexity",
+                "To make the data linearly separable in 2D"
+            ],
+            "answer": "To create a cubic decision boundary"
+        }
+    ],
+    "12": [
+        {
+            "question": "Which library is used to implement SVM in Python?",
+            "options": [
+                "Pandas",
+                "Scikit-Learn",
+                "TensorFlow",
+                "NumPy"
+            ],
+            "answer": "Scikit-Learn"
+        },
+        {
+            "question": "What function is used to split the dataset into training and testing sets?",
+            "options": [
+                "train_test_split",
+                "train_split",
+                "test_split",
+                "split_data"
+            ],
+            "answer": "train_test_split"
+        },
+        {
+            "question": "Which class from Scikit-Learn is used to create the Support Vector Classifier?",
+            "options": [
+                "LinearSVC",
+                "SVC",
+                "LogisticRegression",
+                "SVR"
+            ],
+            "answer": "SVC"
+        },
+        {
+            "question": "Which method is used to normalize the data for better performance in SVM?",
+            "options": [
+                "MinMaxScaler",
+                "StandardScaler",
+                "Normalizer",
+                "RobustScaler"
+            ],
+            "answer": "StandardScaler"
+        }
+    ],
+    "13": [
+        {
+            "question": "What type of problems is XGBoost used for?",
+            "options": [
+                "Regression only",
+                "Classification only",
+                "Both regression and classification",
+                "Unsupervised learning problems"
+            ],
+            "answer": "Both regression and classification"
+        },
+        {
+            "question": "What method does XGBoost use to enhance traditional boosting?",
+            "options": [
+                "Linear regression",
+                "Second-order derivatives",
+                "First-order derivatives",
+                "Logistic regression"
+            ],
+            "answer": "Second-order derivatives"
+        },
+        {
+            "question": "What does XGBoost use to approximate the loss function in regression problems?",
+            "options": [
+                "Exponential expansion",
+                "Taylor expansion",
+                "Fourier expansion",
+                "Polynomial expansion"
+            ],
+            "answer": "Taylor expansion"
+        },
+        {
+            "question": "Which optimization method does XGBoost use to update model parameters?",
+            "options": [
+                "Gradient Descent",
+                "Newton's optimization method",
+                "Stochastic Gradient Descent",
+                "Adam Optimizer"
+            ],
+            "answer": "Newton's optimization method"
+        }
+    ],
+    "14": [
+        {
+            "question": "What does the gain in XGBoost's decision tree splitting process measure?",
+            "options": [
+                "How much the data is sorted",
+                "How much the split improves prediction accuracy",
+                "How many trees are generated",
+                "How many leaves are added"
+            ],
+            "answer": "How much the split improves prediction accuracy"
+        },
+        {
+            "question": "Which regularization type in XGBoost promotes sparsity and aids in feature selection?",
+            "options": [
+                "L1 Regularization (Lasso)",
+                "L2 Regularization (Ridge)",
+                "Both L1 and L2 Regularization",
+                "None of the above"
+            ],
+            "answer": "L1 Regularization (Lasso)"
+        },
+        {
+            "question": "What is the role of the regularization terms in XGBoost?",
+            "options": [
+                "They increase the tree depth",
+                "They help in balancing model complexity and generalization",
+                "They speed up the training process",
+                "They reduce the size of the dataset"
+            ],
+            "answer": "They help in balancing model complexity and generalization"
+        },
+        {
+            "question": "In XGBoost, what do the gradients and Hessians help calculate during the decision tree splitting process?",
+            "options": [
+                "The gain at each node",
+                "The depth of the tree",
+                "The size of the leaves",
+                "The number of features"
+            ],
+            "answer": "The gain at each node"
+        }
+    ],
+    "15": [
+        {
+            "question": "What are the two main components of the objective function in XGBoost?",
+            "options": [
+                "Loss function and regularization term",
+                "Loss function and optimization term",
+                "Regularization term and data splitting",
+                "Optimization term and pruning"
+            ],
+            "answer": "Loss function and regularization term"
+        },
+        {
+            "question": "What is the role of the regularization term in XGBoost?",
+            "options": [
+                "It penalizes complex models to prevent overfitting",
+                "It helps in minimizing the loss function",
+                "It splits the data into training and test sets",
+                "It increases the number of trees in the model"
+            ],
+            "answer": "It penalizes complex models to prevent overfitting"
+        },
+        {
+            "question": "What is the aim of fitting a decision tree in XGBoost?",
+            "options": [
+                "To reduce residuals from previous trees",
+                "To maximize model complexity",
+                "To minimize the training time",
+                "To overfit the data"
+            ],
+            "answer": "To reduce residuals from previous trees"
+        }
+    ],
+    "16": [
+        {
+            "question": "What is the primary purpose of the objective function in XGBoost?",
+            "options": [
+                "To measure how well the model's predictions align with the actual labels",
+                "To penalize overfitting by reducing model complexity",
+                "To optimize the model's learning rate",
+                "To compute the boosting steps"
+            ],
+            "answer": "To measure how well the model's predictions align with the actual labels"
+        },
+        {
+            "question": "Which of the following is an example of a loss function used in XGBoost?",
+            "options": [
+                "Squared error for regression",
+                "Gradient descent",
+                "ReLU activation function",
+                "Linear regression"
+            ],
+            "answer": "Squared error for regression"
+        },
+        {
+            "question": "What is the role of the regularization term in the objective function?",
+            "options": [
+                "To minimize the training time",
+                "To prevent overfitting by penalizing large model complexities",
+                "To measure model prediction accuracy",
+                "To optimize the learning rate"
+            ],
+            "answer": "To prevent overfitting by penalizing large model complexities"
+        },
+        {
+            "question": "What is the goal of each boosting iteration in XGBoost?",
+            "options": [
+                "To maximize the model's complexity",
+                "To minimize the objective function, balancing prediction accuracy and model simplicity",
+                "To focus only on the loss function",
+                "To add more features to the model"
+            ],
+            "answer": "To minimize the objective function, balancing prediction accuracy and model simplicity"
+        }
+    ],
+    "17": [
+        {
+            "question": "What is the first task in PCA for selecting principal components?",
+            "options": [
+                "Sorting the eigenvectors according to their eigenvalues",
+                "Selecting the top k eigenvalues",
+                "Visualizing the data in a scatter plot",
+                "Projecting the data into a lower-dimensional space"
+            ],
+            "answer": "Sorting the eigenvectors according to their eigenvalues"
+        },
+        {
+            "question": "What does the value of k determine in PCA?",
+            "options": [
+                "The dimensionality of the original data",
+                "The dimensionality of the projected data",
+                "The number of eigenvectors to be discarded",
+                "The number of features in the data"
+            ],
+            "answer": "The dimensionality of the projected data"
+        },
+        {
+            "question": "What is the purpose of the scatter plot in PCA visualization?",
+            "options": [
+                "To compare the original data and the projected data",
+                "To visualize the eigenvectors as arrows",
+                "To plot the sorted eigenvalues",
+                "To indicate the directions of minimum variance"
+            ],
+            "answer": "To compare the original data and the projected data"
+        },
+        {
+            "question": "Which method is used to reorder eigenvectors according to their eigenvalues?",
+            "options": [
+                "np.argsort(-eigenvalues)",
+                "np.sort(eigenvalues)",
+                "np.argsort(eigenvectors)",
+                "np.sort(eigenvectors)"
+            ],
+            "answer": "np.argsort(-eigenvalues)"
+        }
+    ],
+    "18": [
+        {
+            "question": "What is the simplest kernel used when the data is already linearly separable?",
+            "options": [
+                "Linear Kernel",
+                "Polynomial Kernel",
+                "Gaussian Kernel",
+                "Sigmoid Kernel"
+            ],
+            "answer": "Linear Kernel"
+        },
+        {
+            "question": "What does the Linear Kernel calculate?",
+            "options": [
+                "Dot product of data points in the original feature space",
+                "Euclidean distance between data points",
+                "Cosine similarity of data points",
+                "Transformation of data into higher dimensions"
+            ],
+            "answer": "Dot product of data points in the original feature space"
+        },
+        {
+            "question": "When using a Linear Kernel in SVM, what kind of decision boundary is formed?",
+            "options": [
+                "Linear decision boundary",
+                "Non-linear decision boundary",
+                "Radial decision boundary",
+                "Circular decision boundary"
+            ],
+            "answer": "Linear decision boundary"
+        }
+    ],
+    "19": [
+        {
+            "question": "What is the purpose of a Polynomial Kernel?",
+            "options": [
+                "To linearize the data",
+                "To capture nonlinear relationships in data",
+                "To reduce the data's dimensionality",
+                "To make the data easier to visualize"
+            ],
+            "answer": "To capture nonlinear relationships in data"
+        },
+        {
+            "question": "What is the general form of a Polynomial Kernel?",
+            "options": [
+                "K(x, x') = (x \u22c5 x' + c)^d",
+                "K(x, x') = (x \u22c5 x' - c)^d",
+                "K(x, x') = (x \u22c5 x' + d)^c",
+                "K(x, x') = (x \u22c5 x' * c)^d"
+            ],
+            "answer": "K(x, x') = (x \u22c5 x' + c)^d"
+        },
+        {
+            "question": "What does the degree of the polynomial control in a Polynomial Kernel?",
+            "options": [
+                "The complexity of the kernel",
+                "The number of features in the data",
+                "The size of the dataset",
+                "The number of support vectors"
+            ],
+            "answer": "The complexity of the kernel"
+        },
+        {
+            "question": "What does expanding the Polynomial Kernel introduce into the feature space?",
+            "options": [
+                "Linear terms",
+                "Quadratic and higher-order terms",
+                "Constant terms",
+                "Logarithmic terms"
+            ],
+            "answer": "Quadratic and higher-order terms"
+        }
+    ]
+}

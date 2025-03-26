@@ -1,0 +1,812 @@
+{
+    "1": [
+        {
+            "question": "What is the main advantage of the Transformer model over RNNs?",
+            "options": [
+                "It uses recurrence to process input sequences",
+                "It eliminates recurrence and convolutions, making it faster and more parallelizable",
+                "It is slower but more accurate than RNNs",
+                "It relies solely on hidden states"
+            ],
+            "answer": "It eliminates recurrence and convolutions, making it faster and more parallelizable"
+        },
+        {
+            "question": "Which of the following is a characteristic of traditional recurrent neural networks (RNNs)?",
+            "options": [
+                "They process input sequences step by step and capture long-term dependencies",
+                "They rely exclusively on attention mechanisms",
+                "They use parallel processing for faster training",
+                "They are based on convolutional layers"
+            ],
+            "answer": "They process input sequences step by step and capture long-term dependencies"
+        },
+        {
+            "question": "Which architecture is primarily used in the Transformer model?",
+            "options": [
+                "Convolutional neural networks",
+                "Attention mechanisms",
+                "Recurrent neural networks",
+                "Hidden state models"
+            ],
+            "answer": "Attention mechanisms"
+        },
+        {
+            "question": "Why are RNNs, including LSTM and GRU, considered difficult to parallelize?",
+            "options": [
+                "They require sequential processing of input sequences",
+                "They are based solely on attention mechanisms",
+                "They rely on convolutional layers",
+                "They use large hidden state representations"
+            ],
+            "answer": "They require sequential processing of input sequences"
+        }
+    ],
+    "2": [
+        {
+            "question": "What is the primary attention mechanism used in the Transformer model?",
+            "options": [
+                "Scaled Dot-Product Attention",
+                "Additive Attention",
+                "Multiplicative Attention",
+                "Self-Attention"
+            ],
+            "answer": "Scaled Dot-Product Attention"
+        },
+        {
+            "question": "What are the dimensions of the queries and keys in the Scaled Dot-Product Attention method?",
+            "options": [
+                "dk",
+                "dv",
+                "dk and dv",
+                "dv and qk"
+            ],
+            "answer": "dk"
+        },
+        {
+            "question": "What does the attention function compute to determine compatibility between queries and keys?",
+            "options": [
+                "Dot products",
+                "Multiplications",
+                "Additions",
+                "Divisions"
+            ],
+            "answer": "Dot products"
+        },
+        {
+            "question": "What is the main benefit of using Scaled Dot-Product Attention in the Transformer model?",
+            "options": [
+                "Capturing dependencies between distant elements",
+                "Improving processing speed",
+                "Reducing model size",
+                "Simplifying input sequences"
+            ],
+            "answer": "Capturing dependencies between distant elements"
+        }
+    ],
+    "3": [
+        {
+            "question": "What is the role of attention in the Transformer model?",
+            "options": [
+                "It determines the model's learning rate.",
+                "It enables the model to focus on different parts of the input sequence.",
+                "It generates the output sequence directly.",
+                "It stores the model's parameters."
+            ],
+            "answer": "It enables the model to focus on different parts of the input sequence."
+        },
+        {
+            "question": "In the attention function, which components interact with each other?",
+            "options": [
+                "Input sequence and output sequence.",
+                "Query and set of key-value pairs.",
+                "Weights and values.",
+                "Output sequence and compatibility function."
+            ],
+            "answer": "Query and set of key-value pairs."
+        },
+        {
+            "question": "What is the result of the interaction between the query and keys in the attention function?",
+            "options": [
+                "A random value is selected.",
+                "A weighted sum of the values.",
+                "The key-value pairs are merged.",
+                "A prediction of the next input sequence."
+            ],
+            "answer": "A weighted sum of the values."
+        },
+        {
+            "question": "What does the compatibility function in attention do?",
+            "options": [
+                "It assigns weights to the keys.",
+                "It assigns weights to each value based on the interaction with the query.",
+                "It determines the relevance of each output.",
+                "It generates the final output of the model."
+            ],
+            "answer": "It assigns weights to each value based on the interaction with the query."
+        }
+    ],
+    "5": [
+        {
+            "question": "What type of architecture does the Transformer model follow?",
+            "options": [
+                "Convolutional Neural Network",
+                "Encoder-Decoder",
+                "Generative Adversarial Network",
+                "Self-Attention"
+            ],
+            "answer": "Encoder-Decoder"
+        },
+        {
+            "question": "What is the main advantage of the Transformer's self-attention mechanism?",
+            "options": [
+                "It improves model interpretability",
+                "It allows for better sequence order alignment",
+                "It enhances parallelization and captures long-range dependencies",
+                "It reduces the computational cost of the model"
+            ],
+            "answer": "It enhances parallelization and captures long-range dependencies"
+        },
+        {
+            "question": "How does the Transformer model generate an output sequence?",
+            "options": [
+                "By using a single-step process",
+                "By generating all elements at once",
+                "By operating in an auto-regressive manner",
+                "By aligning sequence with RNNs"
+            ],
+            "answer": "By operating in an auto-regressive manner"
+        }
+    ],
+    "4": [
+        {
+            "question": "How many identical layers are present in both the encoder and decoder of the Transformer architecture?",
+            "options": [
+                "N = 4",
+                "N = 6",
+                "N = 8",
+                "N = 10"
+            ],
+            "answer": "N = 6"
+        },
+        {
+            "question": "What is the output dimension for all sub-layers in the Transformer architecture?",
+            "options": [
+                "dmodel = 256",
+                "dmodel = 512",
+                "dmodel = 1024",
+                "dmodel = 2048"
+            ],
+            "answer": "dmodel = 512"
+        },
+        {
+            "question": "Which additional sub-layer is included in the decoder of the Transformer architecture?",
+            "options": [
+                "A convolutional layer",
+                "A multi-head attention over the encoder's output",
+                "A positional embedding layer",
+                "A recurrent neural network layer"
+            ],
+            "answer": "A multi-head attention over the encoder's output"
+        },
+        {
+            "question": "How does the decoder in the Transformer architecture prevent attending to future positions in the sequence?",
+            "options": [
+                "By applying dropout",
+                "By masking and offsetting the output embeddings by one position",
+                "By using recurrent connections",
+                "By applying weight sharing"
+            ],
+            "answer": "By masking and offsetting the output embeddings by one position"
+        }
+    ],
+    "7": [
+        {
+            "question": "What is the main function of attention mechanisms in neural network architectures like the Transformer?",
+            "options": [
+                "To allow the model to focus on different parts of the input sequence",
+                "To reduce the model's complexity",
+                "To compute gradients faster during backpropagation",
+                "To optimize the learning rate"
+            ],
+            "answer": "To allow the model to focus on different parts of the input sequence"
+        },
+        {
+            "question": "What is the purpose of scaling the dot products of queries and keys in dot-product attention?",
+            "options": [
+                "To prevent excessively large values and ensure stable gradients during backpropagation",
+                "To increase the computational speed of the attention mechanism",
+                "To make the model focus on the first part of the input sequence",
+                "To reduce the training time"
+            ],
+            "answer": "To prevent excessively large values and ensure stable gradients during backpropagation"
+        },
+        {
+            "question": "Which attention mechanism generally uses a feed-forward network to compute the compatibility function?",
+            "options": [
+                "Additive attention",
+                "Dot-product attention",
+                "Self-attention",
+                "Scaled attention"
+            ],
+            "answer": "Additive attention"
+        },
+        {
+            "question": "When might additive attention perform better than dot-product attention?",
+            "options": [
+                "When dk is small",
+                "When the model has many layers",
+                "When using a large input sequence",
+                "When the model is overfitting"
+            ],
+            "answer": "When dk is small"
+        }
+    ],
+    "8": [
+        {
+            "question": "What does multi-head attention extend in its mechanism?",
+            "options": [
+                "Basic attention mechanism",
+                "Attention heads",
+                "Input sequence",
+                "Output representation"
+            ],
+            "answer": "Basic attention mechanism"
+        },
+        {
+            "question": "What is the main purpose of multi-head attention?",
+            "options": [
+                "To average out information from the input sequence",
+                "To project the queries, keys, and values into multiple subspaces",
+                "To reduce the number of parameters in the model",
+                "To focus on only one part of the input sequence"
+            ],
+            "answer": "To project the queries, keys, and values into multiple subspaces"
+        },
+        {
+            "question": "What does multi-head attention enable the model to do?",
+            "options": [
+                "Attend to different parts of the input with different representations",
+                "Use only one attention head for simplicity",
+                "Reduce the number of layers in the network",
+                "Minimize the number of projections"
+            ],
+            "answer": "Attend to different parts of the input with different representations"
+        },
+        {
+            "question": "Why is multi-head attention especially important in tasks like machine translation?",
+            "options": [
+                "It reduces the need for complex models",
+                "It captures complex relationships and dependencies in the sequence",
+                "It simplifies the input sequence",
+                "It avoids using learned parameter matrices"
+            ],
+            "answer": "It captures complex relationships and dependencies in the sequence"
+        }
+    ],
+    "9": [
+        {
+            "question": "What is the role of the encoder in sequence-to-sequence models such as transformers?",
+            "options": [
+                "It generates memory keys and values from the input sequence.",
+                "It generates output sequences directly.",
+                "It applies masking techniques.",
+                "It decodes the final output."
+            ],
+            "answer": "It generates memory keys and values from the input sequence."
+        },
+        {
+            "question": "How does the decoder in sequence-to-sequence models like transformers attend to the input sequence?",
+            "options": [
+                "By using queries from its previous layer and memory keys and values from the encoder output.",
+                "By generating its own memory keys and values.",
+                "By ignoring the input sequence.",
+                "By processing the input tokens independently."
+            ],
+            "answer": "By using queries from its previous layer and memory keys and values from the encoder output."
+        },
+        {
+            "question": "What is the purpose of the masking technique in the decoder of sequence-to-sequence models?",
+            "options": [
+                "To prevent leftward information flow and maintain the auto-regressive property.",
+                "To focus on all positions in the sequence.",
+                "To improve the encoder's attention mechanism.",
+                "To enhance model parallelization."
+            ],
+            "answer": "To prevent leftward information flow and maintain the auto-regressive property."
+        },
+        {
+            "question": "What mechanism allows sequence-to-sequence models to consider all input tokens when generating outputs?",
+            "options": [
+                "The attention mechanism in both the encoder and decoder.",
+                "The convolutional layers in the encoder.",
+                "The recurrent layers in the decoder.",
+                "The auto-regressive property in the encoder."
+            ],
+            "answer": "The attention mechanism in both the encoder and decoder."
+        }
+    ],
+    "10": [
+        {
+            "question": "What is the purpose of the feed-forward network in the encoder and decoder?",
+            "options": [
+                "To allow each position to focus on all previous positions",
+                "To introduce non-linearity to the model",
+                "To create queries, keys, and values",
+                "To improve self-attention efficiency"
+            ],
+            "answer": "To introduce non-linearity to the model"
+        },
+        {
+            "question": "In the encoder's self-attention mechanism, what allows each position to attend to all other positions?",
+            "options": [
+                "Linear transformations",
+                "Queries, keys, and values from its own previous layer",
+                "Feed-forward network",
+                "Position encoding"
+            ],
+            "answer": "Queries, keys, and values from its own previous layer"
+        },
+        {
+            "question": "How does self-attention in the decoder function?",
+            "options": [
+                "It allows each position to focus only on its own position",
+                "It enables each position to attend to all previous positions in the sequence",
+                "It uses a feed-forward network for attention",
+                "It only focuses on the first position in the sequence"
+            ],
+            "answer": "It enables each position to attend to all previous positions in the sequence"
+        }
+    ],
+    "11": [
+        {
+            "question": "What is the purpose of positional encodings in a model?",
+            "options": [
+                "To inject information about the positions of tokens in a sequence",
+                "To reduce the size of input embeddings",
+                "To control the flow of information in the encoder and decoder",
+                "To learn the relationship between tokens in a sequence"
+            ],
+            "answer": "To inject information about the positions of tokens in a sequence"
+        },
+        {
+            "question": "Which method is used to generate positional encodings?",
+            "options": [
+                "Sinusoidal functions",
+                "Linear functions",
+                "Recurrent neural networks",
+                "Convolutional layers"
+            ],
+            "answer": "Sinusoidal functions"
+        },
+        {
+            "question": "What is the advantage of using sinusoidal positional encodings over learned embeddings?",
+            "options": [
+                "It allows the model to extrapolate to longer sequence lengths during inference",
+                "It reduces the computational complexity",
+                "It is more suitable for short sequences",
+                "It helps in better token embedding compression"
+            ],
+            "answer": "It allows the model to extrapolate to longer sequence lengths during inference"
+        },
+        {
+            "question": "In the equation for sinusoidal positional encodings, what does 'pos' represent?",
+            "options": [
+                "Position of a token in the sequence",
+                "Dimension of the encoding",
+                "The frequency of the sine function",
+                "The length of the input sequence"
+            ],
+            "answer": "Position of a token in the sequence"
+        }
+    ],
+    "12": [
+        {
+            "question": "What is one key advantage of self-attention compared to recurrent layers?",
+            "options": [
+                "Higher computational complexity",
+                "Better at handling long-range dependencies",
+                "Requires more sequential processing",
+                "Less parallel computation"
+            ],
+            "answer": "Better at handling long-range dependencies"
+        },
+        {
+            "question": "Which of the following is true about the computational complexity of self-attention layers?",
+            "options": [
+                "Self-attention layers have linear complexity",
+                "Self-attention layers have constant complexity",
+                "Self-attention layers require more resources than recurrent layers",
+                "Recurrent layers have constant complexity"
+            ],
+            "answer": "Self-attention layers have constant complexity"
+        },
+        {
+            "question": "In terms of parallelization, how does self-attention compare to recurrent layers?",
+            "options": [
+                "Self-attention allows for less parallel computation",
+                "Self-attention allows for more parallel computation",
+                "Self-attention requires sequential processing",
+                "Recurrent layers allow more parallel computation"
+            ],
+            "answer": "Self-attention allows for more parallel computation"
+        },
+        {
+            "question": "When does self-attention outperform recurrent layers in terms of computational speed?",
+            "options": [
+                "When the sequence length is larger than the representation dimensionality",
+                "When the sequence length is smaller than the representation dimensionality",
+                "When the path length between positions is longer",
+                "When parallel computation is limited"
+            ],
+            "answer": "When the sequence length is smaller than the representation dimensionality"
+        }
+    ],
+    "13": [
+        {
+            "question": "What is the primary purpose of restricting the self-attention mechanism to a neighborhood of size r?",
+            "options": [
+                "To reduce the complexity of interactions across all sequence positions",
+                "To increase the complexity of sequence interactions",
+                "To increase the length of paths the attention mechanism needs to process",
+                "To eliminate the need for convolutional layers"
+            ],
+            "answer": "To reduce the complexity of interactions across all sequence positions"
+        },
+        {
+            "question": "How does the complexity of convolutional layers compare to recurrent layers?",
+            "options": [
+                "Convolutional layers are less computationally expensive than recurrent layers",
+                "Convolutional layers are equally computationally expensive as recurrent layers",
+                "Convolutional layers are more computationally expensive than recurrent layers by a factor of k",
+                "Recurrent layers do not require convolutional layers"
+            ],
+            "answer": "Convolutional layers are more computationally expensive than recurrent layers by a factor of k"
+        },
+        {
+            "question": "What is the benefit of using separable convolutions?",
+            "options": [
+                "They significantly increase the computational complexity",
+                "They reduce the computational complexity compared to standard convolutions",
+                "They remove the need for attention mechanisms",
+                "They only work for very short sequences"
+            ],
+            "answer": "They reduce the computational complexity compared to standard convolutions"
+        },
+        {
+            "question": "What is a notable benefit of self-attention mechanisms in neural networks?",
+            "options": [
+                "It can generate faster computations with reduced accuracy",
+                "It results in less interpretable models",
+                "It allows for the creation of more interpretable models",
+                "It removes the need for attention heads"
+            ],
+            "answer": "It allows for the creation of more interpretable models"
+        }
+    ],
+    "14": [
+        {
+            "question": "What is the size of the WMT 2014 English-German dataset?",
+            "options": [
+                "4.5 million sentence pairs",
+                "36 million sentence pairs",
+                "25,000 sentence pairs",
+                "1 million sentence pairs"
+            ],
+            "answer": "4.5 million sentence pairs"
+        },
+        {
+            "question": "Which hardware was used for training the models?",
+            "options": [
+                "8 NVIDIA P100 GPUs",
+                "4 NVIDIA V100 GPUs",
+                "16 NVIDIA A100 GPUs",
+                "12 NVIDIA T4 GPUs"
+            ],
+            "answer": "8 NVIDIA P100 GPUs"
+        },
+        {
+            "question": "How long did it take to train the base models?",
+            "options": [
+                "12 hours",
+                "3.5 days",
+                "5 hours",
+                "24 hours"
+            ],
+            "answer": "12 hours"
+        },
+        {
+            "question": "What tokenization method was used for processing the datasets?",
+            "options": [
+                "Byte-pair encoding (BPE)",
+                "Word2Vec",
+                "TF-IDF",
+                "FastText"
+            ],
+            "answer": "Byte-pair encoding (BPE)"
+        }
+    ],
+    "15": [
+        {
+            "question": "What is the purpose of residual dropout in neural networks?",
+            "options": [
+                "To prevent overfitting by dropping units randomly during training.",
+                "To speed up training by removing unnecessary layers.",
+                "To improve the model's performance on training data.",
+                "To increase the number of units in each layer."
+            ],
+            "answer": "To prevent overfitting by dropping units randomly during training."
+        },
+        {
+            "question": "What is the smoothing value used for label smoothing during training?",
+            "options": [
+                "0.05",
+                "0.1",
+                "0.2",
+                "0.3"
+            ],
+            "answer": "0.1"
+        },
+        {
+            "question": "Where is dropout applied in the model?",
+            "options": [
+                "Only to the encoder stack.",
+                "Only to the decoder stack.",
+                "To both the encoder and decoder stacks, including embeddings and positional encodings.",
+                "Only to the output layer."
+            ],
+            "answer": "To both the encoder and decoder stacks, including embeddings and positional encodings."
+        },
+        {
+            "question": "What does label smoothing do in neural networks?",
+            "options": [
+                "It increases the confidence of the model in its predictions.",
+                "It reduces overfitting by decreasing the confidence of the model in its predictions.",
+                "It improves the training speed by removing unnecessary data.",
+                "It helps the model memorize the training data more accurately."
+            ],
+            "answer": "It reduces overfitting by decreasing the confidence of the model in its predictions."
+        }
+    ],
+    "16": [
+        {
+            "question": "What is the BLEU score achieved by the Transformer (big) model for the English-to-German translation task?",
+            "options": [
+                "28.4",
+                "30.0",
+                "25.5",
+                "35.2"
+            ],
+            "answer": "28.4"
+        },
+        {
+            "question": "For which language pair did the Transformer (big) model achieve the highest BLEU score?",
+            "options": [
+                "English-to-French",
+                "English-to-German",
+                "English-to-Spanish",
+                "English-to-Italian"
+            ],
+            "answer": "English-to-French"
+        },
+        {
+            "question": "What beam size was used for beam search in the Transformer model during inference?",
+            "options": [
+                "4",
+                "2",
+                "5",
+                "10"
+            ],
+            "answer": "4"
+        },
+        {
+            "question": "What is the main advantage of the Transformer model over previous models in machine translation tasks?",
+            "options": [
+                "Higher translation quality with lower computational cost",
+                "Lower translation quality with lower computational cost",
+                "Higher translation quality with higher computational cost",
+                "Lower translation quality with higher computational cost"
+            ],
+            "answer": "Higher translation quality with lower computational cost"
+        }
+    ],
+    "17": [
+        {
+            "question": "What was the main purpose of the study conducted on the Transformer model?",
+            "options": [
+                "To compare English-to-German translation performance on different datasets",
+                "To assess how variations in Transformer components affect performance on English-to-German translation",
+                "To evaluate the effect of dropout on overfitting",
+                "To examine the role of positional encoding in the Transformer model"
+            ],
+            "answer": "To assess how variations in Transformer components affect performance on English-to-German translation"
+        },
+        {
+            "question": "What happened to the BLEU score when the number of attention heads was reduced to a single head?",
+            "options": [
+                "The BLEU score increased",
+                "The BLEU score dropped by 0.9",
+                "The BLEU score remained unchanged",
+                "The BLEU score improved slightly"
+            ],
+            "answer": "The BLEU score dropped by 0.9"
+        },
+        {
+            "question": "Which component's reduction was linked to a drop in model performance, indicating a need for a more complex compatibility function?",
+            "options": [
+                "Number of attention heads",
+                "Attention key size (dk)",
+                "Positional encoding type",
+                "Dropout rate"
+            ],
+            "answer": "Attention key size (dk)"
+        },
+        {
+            "question": "What did the study suggest about the effect of switching from sinusoidal positional encoding to learned positional embeddings?",
+            "options": [
+                "It drastically improved model performance",
+                "It had no significant impact on performance",
+                "It caused a slight performance decline",
+                "It required a more complex computational effort"
+            ],
+            "answer": "It had no significant impact on performance"
+        }
+    ],
+    "18": [
+        {
+            "question": "What is the main innovation of the Transformer architecture?",
+            "options": [
+                "Replacing convolutional layers with fully connected layers",
+                "Replacing traditional recurrent layers with multi-headed self-attention mechanisms",
+                "Using recurrent layers to enhance translation tasks",
+                "Introducing a new type of activation function"
+            ],
+            "answer": "Replacing traditional recurrent layers with multi-headed self-attention mechanisms"
+        },
+        {
+            "question": "In which translation tasks did the Transformer achieve state-of-the-art results in WMT 2014?",
+            "options": [
+                "English-to-German and English-to-French",
+                "English-to-Spanish and German-to-French",
+                "French-to-English and Spanish-to-German",
+                "German-to-English and English-to-Italian"
+            ],
+            "answer": "English-to-German and English-to-French"
+        },
+        {
+            "question": "What aspect of the Transformer allows it to train faster than traditional models?",
+            "options": [
+                "The use of recurrent layers",
+                "The multi-headed self-attention mechanism",
+                "The convolutional layer enhancements",
+                "Its ability to use fewer training examples"
+            ],
+            "answer": "The multi-headed self-attention mechanism"
+        },
+        {
+            "question": "What future applications are anticipated for the Transformer architecture?",
+            "options": [
+                "Enhancing traditional computer vision models",
+                "Expanding across various domains such as images, audio, and video",
+                "Focusing only on text-based tasks",
+                "Developing new types of recurrent neural networks"
+            ],
+            "answer": "Expanding across various domains such as images, audio, and video"
+        }
+    ],
+    "19": [
+        {
+            "question": "Who are some of the individuals acknowledged in the research for their contributions?",
+            "options": [
+                "Nal Kalchbrenner and Stephan Gouws",
+                "Ba et al. and Bahdanau et al.",
+                "Cheng et al. and Britz et al.",
+                "RNNs and LSTMs"
+            ],
+            "answer": "Nal Kalchbrenner and Stephan Gouws"
+        },
+        {
+            "question": "Which paper is associated with the concept of Layer Normalization?",
+            "options": [
+                "Ba et al., 2016",
+                "Bahdanau et al., 2014",
+                "Cheng et al., 2016",
+                "Britz et al., 2017"
+            ],
+            "answer": "Ba et al., 2016"
+        },
+        {
+            "question": "What is a key focus of the referenced works in the research?",
+            "options": [
+                "Neural networks and machine learning techniques",
+                "Recurrent neural networks (RNNs)",
+                "Deep residual learning for image recognition",
+                "All of the above"
+            ],
+            "answer": "All of the above"
+        }
+    ],
+    "21": [
+        {
+            "question": "What does Neural Machine Translation (NMT) refer to?",
+            "options": [
+                "The use of neural networks to automatically generate images",
+                "The use of neural networks to automatically translate languages",
+                "The use of neural networks to classify data",
+                "The use of neural networks for natural language processing tasks"
+            ],
+            "answer": "The use of neural networks to automatically translate languages"
+        },
+        {
+            "question": "Which mechanism significantly improves the performance of Neural Machine Translation systems?",
+            "options": [
+                "Recurrent Neural Networks",
+                "Attention mechanisms",
+                "Convolutional layers",
+                "Data augmentation"
+            ],
+            "answer": "Attention mechanisms"
+        },
+        {
+            "question": "Who introduced structured self-attention models in Neural Machine Translation research?",
+            "options": [
+                "Zhouhan Lin et al.",
+                "Samy Bengio & \u0141ukasz Kaiser",
+                "Minh-Thang Luong et al.",
+                "Yoshua Bengio"
+            ],
+            "answer": "Minh-Thang Luong et al."
+        },
+        {
+            "question": "What is one benefit of decomposing attention mechanisms in NMT models?",
+            "options": [
+                "Improved model interpretability and scalability",
+                "Faster training times",
+                "More efficient data storage",
+                "Simplified input-output mappings"
+            ],
+            "answer": "Improved model interpretability and scalability"
+        }
+    ],
+    "22": [
+        {
+            "question": "What was the focus of Romain Paulus et al. (2017) and Ofir Press & Lior Wolf (2016)?",
+            "options": [
+                "Improving image recognition",
+                "Reinforcement learning for abstractive summarization",
+                "Natural language processing with subword units",
+                "Data augmentation in deep learning"
+            ],
+            "answer": "Reinforcement learning for abstractive summarization"
+        },
+        {
+            "question": "What technique did Rico Sennrich et al. (2015) use to address rare word translations in NMT?",
+            "options": [
+                "Output embeddings",
+                "Reinforcement learning",
+                "Subword units",
+                "Sparsely-gated mixture-of-experts layers"
+            ],
+            "answer": "Subword units"
+        },
+        {
+            "question": "What is the purpose of dropout in deep learning models?",
+            "options": [
+                "Improve model efficiency",
+                "Prevent overfitting",
+                "Enhance data sparsity",
+                "Increase model complexity"
+            ],
+            "answer": "Prevent overfitting"
+        },
+        {
+            "question": "Which technique is aimed at improving model efficiency and preventing overfitting, as proposed by Shazeer et al. (2017)?",
+            "options": [
+                "Subword units",
+                "Reinforcement learning",
+                "Sparsely-gated mixture-of-experts layers",
+                "Output embeddings"
+            ],
+            "answer": "Sparsely-gated mixture-of-experts layers"
+        }
+    ]
+}

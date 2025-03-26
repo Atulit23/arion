@@ -1,0 +1,686 @@
+{
+    "1": [
+        {
+            "question": "What is the primary goal of Multi-Head Latent Attention (MLA) in DeepSeek-V2?",
+            "options": [
+                "To improve the accuracy of model predictions",
+                "To reduce memory footprint during inference",
+                "To increase the training speed of the model",
+                "To enhance the model's interpretability"
+            ],
+            "answer": "To reduce memory footprint during inference"
+        },
+        {
+            "question": "Which of the following is NOT one of the innovations of MLA?",
+            "options": [
+                "Low-Rank KV Compression",
+                "Decoupled Rotary Position Embeddings (RoPE)",
+                "Transformer Block Optimization",
+                "Reduced memory usage"
+            ],
+            "answer": "Transformer Block Optimization"
+        },
+        {
+            "question": "How does MLA improve inference performance?",
+            "options": [
+                "By using a larger KV cache",
+                "Through Low-Rank KV Compression and Decoupled RoPE",
+                "By increasing the number of attention heads",
+                "By reducing the size of the model"
+            ],
+            "answer": "Through Low-Rank KV Compression and Decoupled RoPE"
+        }
+    ],
+    "2": [
+        {
+            "question": "What is the first key component of MLA?",
+            "options": [
+                "Low-Rank KV Compression",
+                "Decoupled Rotary Position Embeddings",
+                "Attention Mechanism",
+                "Positional Encoding"
+            ],
+            "answer": "Low-Rank KV Compression"
+        },
+        {
+            "question": "What is the purpose of Latent Projection in Low-Rank KV Compression?",
+            "options": [
+                "To compress keys and values into a lower-dimensional latent space",
+                "To increase the size of the key and value vectors",
+                "To separate positional encoding from the compressed dimensions",
+                "To encode positional information using rotation matrices"
+            ],
+            "answer": "To compress keys and values into a lower-dimensional latent space"
+        },
+        {
+            "question": "How does Decoupled Rotary Position Embeddings (RoPE) improve efficiency?",
+            "options": [
+                "By rotating the query and key vectors to encode positional information",
+                "By reducing the size of the key and value vectors",
+                "By directly embedding positional information into the compressed dimensions",
+                "By up-projecting the compressed latent vector back to the original dimension"
+            ],
+            "answer": "By rotating the query and key vectors to encode positional information"
+        },
+        {
+            "question": "What is cached during the attention computation in Low-Rank KV Compression?",
+            "options": [
+                "The full-dimensional key and value vectors",
+                "Only the compressed latent vector",
+                "The query vector",
+                "The positional encoding matrix"
+            ],
+            "answer": "Only the compressed latent vector"
+        }
+    ],
+    "3": [
+        {
+            "question": "What is the core idea behind the Mixture of Experts (MoE) mechanism in machine learning models?",
+            "options": [
+                "Dividing the model into multiple experts and using a gating mechanism to decide which experts will process the input tokens.",
+                "Using a single expert to handle all input tokens in the model.",
+                "Only activating one expert for every input token.",
+                "Assigning equal weight to all experts for processing input tokens."
+            ],
+            "answer": "Dividing the model into multiple experts and using a gating mechanism to decide which experts will process the input tokens."
+        },
+        {
+            "question": "What does the gating network in the MoE mechanism determine?",
+            "options": [
+                "It assigns a weight to each expert to determine their contribution to the output.",
+                "It selects the K number of experts for each token.",
+                "It decides the hidden dimension size of the model.",
+                "It assigns the number of transformer layers."
+            ],
+            "answer": "It assigns a weight to each expert to determine their contribution to the output."
+        },
+        {
+            "question": "What is typically used to limit the number of activated experts in MoE?",
+            "options": [
+                "Top-K activation",
+                "Random selection of experts",
+                "Recurrent neural networks",
+                "Layer-wise expert selection"
+            ],
+            "answer": "Top-K activation"
+        },
+        {
+            "question": "In PyTorch, which of the following configurations is NOT required when implementing MoE?",
+            "options": [
+                "Vocabulary size",
+                "Hidden dimension (d_model)",
+                "Number of transformer layers",
+                "Optimizer choice"
+            ],
+            "answer": "Optimizer choice"
+        }
+    ],
+    "4": [
+        {
+            "question": "What is the purpose of the 'vocab_size' parameter in the Mixture of Experts (MoE) configuration?",
+            "options": [
+                "Defines the number of unique tokens in the model\u2019s tokenizer",
+                "Sets the maximum sequence length for input tokens",
+                "Determines the number of attention heads in the model",
+                "Defines the number of experts used in the model"
+            ],
+            "answer": "Defines the number of unique tokens in the model\u2019s tokenizer"
+        },
+        {
+            "question": "Which parameter controls the number of attention heads in the Mixture of Experts (MoE) configuration?",
+            "options": [
+                "n_layers",
+                "n_heads",
+                "d_kv_comp",
+                "d_model"
+            ],
+            "answer": "n_heads"
+        },
+        {
+            "question": "What does the 'n_experts' parameter in MoE configuration represent?",
+            "options": [
+                "The number of layers in the transformer model",
+                "The number of parallel sequences processed during training",
+                "The number of available experts in the model",
+                "The number of tokens processed in each batch"
+            ],
+            "answer": "The number of available experts in the model"
+        },
+        {
+            "question": "What is the role of the 'd_kv_comp' parameter in the MoE configuration?",
+            "options": [
+                "To set the hidden dimension size",
+                "To reduce the size of keys and values for memory optimization",
+                "To define the rotary embedding dimension",
+                "To control the maximum sequence length"
+            ],
+            "answer": "To reduce the size of keys and values for memory optimization"
+        }
+    ],
+    "5": [
+        {
+            "question": "What is the primary purpose of rotary embedding in transformer models?",
+            "options": [
+                "To encode positional information directly into the input tensor",
+                "To generate frequency values for attention heads",
+                "To transform queries and keys in multi-head attention",
+                "To refine the input tensor across multiple attention heads"
+            ],
+            "answer": "To encode positional information directly into the input tensor"
+        },
+        {
+            "question": "Which parameter is used to adjust the frequencies for handling longer sequences in rotary embedding?",
+            "options": [
+                "scale",
+                "inv_freq",
+                "W_dkv",
+                "W_uv"
+            ],
+            "answer": "scale"
+        },
+        {
+            "question": "What is the role of the inverse frequencies (inv_freq) in the rotary embedding mechanism?",
+            "options": [
+                "They scale the positional indices before multiplying with the angles",
+                "They adjust the embedding dimensions for different input sizes",
+                "They generate the final rotary angles for the input tensor",
+                "They refine the projections in multi-head attention"
+            ],
+            "answer": "They generate the final rotary angles for the input tensor"
+        },
+        {
+            "question": "In the context of multi-head attention, what is the function of the linear layers W_dkv and W_dq?",
+            "options": [
+                "To split the input into query, key, and value projections",
+                "To scale the positional frequencies",
+                "To adjust the rotary angles for each head",
+                "To combine the rotary embeddings with the input tensor"
+            ],
+            "answer": "To split the input into query, key, and value projections"
+        }
+    ],
+    "6": [
+        {
+            "question": "What is the purpose of the first linear layer, `w1`, in a transformer model's forward pass?",
+            "options": [
+                "To compress the input's feature dimension",
+                "To expand the input's feature dimension",
+                "To apply rotary embeddings",
+                "To rotate the input components"
+            ],
+            "answer": "To expand the input's feature dimension"
+        },
+        {
+            "question": "What happens after the second linear layer, `w2`, in a transformer model?",
+            "options": [
+                "The input is rotated according to precomputed frequencies",
+                "The input is projected back to the original embedding dimension",
+                "The model's capacity is reduced",
+                "The sequence length is modified"
+            ],
+            "answer": "The input is projected back to the original embedding dimension"
+        },
+        {
+            "question": "What is the role of rotary embeddings in the transformer model?",
+            "options": [
+                "To adjust for the sequential nature of the data",
+                "To project the data into a larger intermediate space",
+                "To expand the input's feature dimension",
+                "To compress the model's hidden size"
+            ],
+            "answer": "To adjust for the sequential nature of the data"
+        },
+        {
+            "question": "What is the final output of the forward pass in a transformer model?",
+            "options": [
+                "A tensor with a shape of [batch_size, seq_len, d_model]",
+                "A tensor with a reduced feature dimension",
+                "A tensor that only contains positional information",
+                "A tensor with a shape of [seq_len, batch_size, d_model]"
+            ],
+            "answer": "A tensor with a shape of [batch_size, seq_len, d_model]"
+        }
+    ],
+    "7": [
+        {
+            "question": "What is the first component in the self-attention mechanism described?",
+            "options": [
+                "Attention Computation",
+                "Low-Rank Compression",
+                "Decoupled Rotary Embeddings",
+                "Output Projection"
+            ],
+            "answer": "Low-Rank Compression"
+        },
+        {
+            "question": "Which component applies positional information to subsets of query and key dimensions?",
+            "options": [
+                "Low-Rank Compression",
+                "Attention Computation",
+                "Decoupled Rotary Embeddings",
+                "Output Projection"
+            ],
+            "answer": "Decoupled Rotary Embeddings"
+        },
+        {
+            "question": "What is the purpose of the matrix 'output' in the self-attention mechanism?",
+            "options": [
+                "To compute attention scores",
+                "To add positional information",
+                "To project attention heads back to the model's hidden dimension",
+                "To compress keys and values"
+            ],
+            "answer": "To project attention heads back to the model's hidden dimension"
+        },
+        {
+            "question": "Which component helps maintain positional encodings in the attention mechanism?",
+            "options": [
+                "RotaryEmbedding class",
+                "W_dkv weight matrix",
+                "W_qr and W_kr weight matrices",
+                "W_uk and W_uv weight matrices"
+            ],
+            "answer": "RotaryEmbedding class"
+        }
+    ],
+    "8": [
+        {
+            "question": "What is the purpose of KV Compression in the forward pass of the model?",
+            "options": [
+                "To project the compressed queries to their original dimensions",
+                "To compress the keys and values from the input tensor",
+                "To concatenate the base and rotary components",
+                "To apply rotary embeddings to the queries and keys"
+            ],
+            "answer": "To compress the keys and values from the input tensor"
+        },
+        {
+            "question": "How are the compressed queries split in the forward pass of the model?",
+            "options": [
+                "Into two components: q_base and q_rot",
+                "Into three components: q_base, q_rot, and q_extra",
+                "Into key and value components",
+                "Into two tensors: k and v"
+            ],
+            "answer": "Into two components: q_base and q_rot"
+        },
+        {
+            "question": "What operation is used to compute the attention scores in the forward pass?",
+            "options": [
+                "Dot-product between queries and keys",
+                "Concatenation of queries and keys",
+                "Element-wise multiplication of queries and values",
+                "Linear projection of keys"
+            ],
+            "answer": "Dot-product between queries and keys"
+        },
+        {
+            "question": "What is the final step in the attention mechanism of the model?",
+            "options": [
+                "The queries and keys are concatenated",
+                "The attention weights are normalized",
+                "The weighted sum of values is computed",
+                "The output is passed through a linear layer"
+            ],
+            "answer": "The output is passed through a linear layer"
+        }
+    ],
+    "9": [
+        {
+            "question": "What is the purpose of using positional encodings in models?",
+            "options": [
+                "To improve computational complexity",
+                "To inject information about the position of each token in the sequence",
+                "To handle token dependencies",
+                "To reduce model size"
+            ],
+            "answer": "To inject information about the position of each token in the sequence"
+        },
+        {
+            "question": "How do rotary embeddings help with positional encoding?",
+            "options": [
+                "By rotating embeddings based on a set frequency",
+                "By increasing computational complexity",
+                "By reducing model performance",
+                "By using fixed positional embeddings"
+            ],
+            "answer": "By rotating embeddings based on a set frequency"
+        },
+        {
+            "question": "What is the main advantage of rotary embeddings over traditional methods?",
+            "options": [
+                "More interpretable positional encoding",
+                "Less need for attention mechanisms",
+                "Better training performance",
+                "Faster processing speed"
+            ],
+            "answer": "More interpretable positional encoding"
+        },
+        {
+            "question": "What task can benefit from the use of rotary embeddings in NLP models?",
+            "options": [
+                "Machine translation",
+                "Image generation",
+                "Data compression",
+                "Speech recognition"
+            ],
+            "answer": "Machine translation"
+        }
+    ],
+    "10": [
+        {
+            "question": "What is the purpose of rotary embeddings in attention computation?",
+            "options": [
+                "To compress the keys and values",
+                "To compute the attention scores",
+                "To transform the attention output back into hidden dimension",
+                "To focus on the most relevant parts of the input sequence"
+            ],
+            "answer": "To focus on the most relevant parts of the input sequence"
+        },
+        {
+            "question": "What does the model do after computing the attention scores?",
+            "options": [
+                "Transforms the attention output into the hidden dimension",
+                "Applies the scores to the keys to compute the final output",
+                "Applies the scores to the values to derive the final output",
+                "Compresses the values for further processing"
+            ],
+            "answer": "Applies the scores to the values to derive the final output"
+        },
+        {
+            "question": "Why is the output projection step important in attention computation?",
+            "options": [
+                "It helps to focus on the most relevant parts of the sequence",
+                "It transforms the attention output back into the model's hidden dimension",
+                "It computes the attention scores from keys and values",
+                "It compresses the input sequence for better processing"
+            ],
+            "answer": "It transforms the attention output back into the model's hidden dimension"
+        },
+        {
+            "question": "What is derived after the attention scores are applied to the values?",
+            "options": [
+                "The weighted sum of the input values",
+                "The keys and values",
+                "The final model output",
+                "The compressed input sequence"
+            ],
+            "answer": "The weighted sum of the input values"
+        }
+    ],
+    "11": [
+        {
+            "question": "What is the main difference between shared and routed experts in transformer networks?",
+            "options": [
+                "Shared experts process specific tokens, routed experts process all tokens.",
+                "Shared experts handle universal patterns, routed experts are selectively activated.",
+                "Routed experts are always active, shared experts have a gating mechanism.",
+                "Shared experts are used only during training, routed experts during inference."
+            ],
+            "answer": "Shared experts handle universal patterns, routed experts are selectively activated."
+        },
+        {
+            "question": "What role does the gating network play in routed experts?",
+            "options": [
+                "It activates all experts to process each token.",
+                "It calculates scores for each expert and selects the top-K experts.",
+                "It balances the usage of experts during training.",
+                "It ensures experts are not activated based on token types."
+            ],
+            "answer": "It calculates scores for each expert and selects the top-K experts."
+        },
+        {
+            "question": "What is the purpose of the Expert Balance Loss in transformer networks?",
+            "options": [
+                "To make sure all experts are active during inference.",
+                "To prevent the gating network from being overused.",
+                "To ensure experts are used evenly by penalizing underused ones.",
+                "To force experts to learn more general patterns."
+            ],
+            "answer": "To ensure experts are used evenly by penalizing underused ones."
+        },
+        {
+            "question": "How does the routing mechanism in transformer networks improve efficiency?",
+            "options": [
+                "By activating all experts for every token.",
+                "By selectively activating the most relevant experts for each token.",
+                "By using a single expert for all tokens.",
+                "By reducing the need for a gating network."
+            ],
+            "answer": "By selectively activating the most relevant experts for each token."
+        }
+    ],
+    "12": [
+        {
+            "question": "What happens during the sparse computation step?",
+            "options": [
+                "All experts process the token",
+                "Only the top-K experts process the token",
+                "Only one expert processes the token",
+                "Experts are not involved in processing the token"
+            ],
+            "answer": "Only the top-K experts process the token"
+        },
+        {
+            "question": "What is the main advantage of the sparse computation step?",
+            "options": [
+                "More experts are involved in processing each token",
+                "It allows for more efficient computation by limiting the number of experts",
+                "It ensures all experts are utilized equally",
+                "It eliminates the need for gating scores"
+            ],
+            "answer": "It allows for more efficient computation by limiting the number of experts"
+        },
+        {
+            "question": "How are the outputs from the experts combined in the sparse computation step?",
+            "options": [
+                "Based on the number of experts involved",
+                "By their gating scores",
+                "Through a random selection process",
+                "By averaging the outputs"
+            ],
+            "answer": "By their gating scores"
+        },
+        {
+            "question": "What is the final result after processing by both shared and routed experts?",
+            "options": [
+                "A random output is produced",
+                "The final output for the token is the sum of the expert outputs",
+                "The token is discarded",
+                "Only the output of the shared expert is used"
+            ],
+            "answer": "The final output for the token is the sum of the expert outputs"
+        }
+    ],
+    "13": [
+        {
+            "question": "What are transformer blocks primarily used for?",
+            "options": [
+                "Image classification",
+                "Sequence prediction and language modeling",
+                "Speech recognition",
+                "Object detection"
+            ],
+            "answer": "Sequence prediction and language modeling"
+        },
+        {
+            "question": "Which two main components make up a transformer block?",
+            "options": [
+                "Self-attention mechanism and feed-forward network",
+                "Convolutional layers and pooling layers",
+                "Recurrent units and linear layers",
+                "Dropout layers and batch normalization"
+            ],
+            "answer": "Self-attention mechanism and feed-forward network"
+        },
+        {
+            "question": "What does the self-attention mechanism in a transformer model allow the model to do?",
+            "options": [
+                "Reduce training time",
+                "Weigh the importance of each token relative to others",
+                "Automatically generate sequences",
+                "Perform real-time translation"
+            ],
+            "answer": "Weigh the importance of each token relative to others"
+        },
+        {
+            "question": "What is the final output of transformer blocks used for in language modeling?",
+            "options": [
+                "Predicting the next token in a sequence",
+                "Classifying images",
+                "Generating speech",
+                "Translating text"
+            ],
+            "answer": "Predicting the next token in a sequence"
+        }
+    ],
+    "14": [
+        {
+            "question": "What is the primary function of the language modeling head in transformer-based models?",
+            "options": [
+                "To project the hidden states into the input space",
+                "To predict the next token in a sequence",
+                "To initialize the model's weights",
+                "To reduce the hidden state vector size"
+            ],
+            "answer": "To predict the next token in a sequence"
+        },
+        {
+            "question": "What does the linear layer in the language modeling head do?",
+            "options": [
+                "It reduces the model size",
+                "It maps the hidden state vector to the vocabulary size",
+                "It applies a softmax activation function",
+                "It normalizes the output logits"
+            ],
+            "answer": "It maps the hidden state vector to the vocabulary size"
+        },
+        {
+            "question": "What is the role of the softmax activation in the language modeling head?",
+            "options": [
+                "To project the hidden states into a space corresponding to the vocabulary size",
+                "To generate probabilities for each token in the vocabulary",
+                "To map the output logits back to the input space",
+                "To reduce the hidden state vector to a single value"
+            ],
+            "answer": "To generate probabilities for each token in the vocabulary"
+        }
+    ],
+    "15": [
+        {
+            "question": "What is the main goal of Xavier initialization?",
+            "options": [
+                "To speed up training by increasing the learning rate",
+                "To prevent vanishing or exploding gradients",
+                "To reduce the size of the neural network",
+                "To initialize weights with large random values"
+            ],
+            "answer": "To prevent vanishing or exploding gradients"
+        },
+        {
+            "question": "What does the formula for Xavier initialization depend on?",
+            "options": [
+                "The number of input and output neurons",
+                "The number of hidden layers in the network",
+                "The activation function used",
+                "The type of neural network architecture"
+            ],
+            "answer": "The number of input and output neurons"
+        },
+        {
+            "question": "What does Xavier initialization help maintain during backpropagation?",
+            "options": [
+                "The learning rate",
+                "The variance of activations",
+                "The number of neurons",
+                "The weights' magnitude"
+            ],
+            "answer": "The variance of activations"
+        },
+        {
+            "question": "Which of the following issues does Xavier initialization address?",
+            "options": [
+                "Overfitting in deep networks",
+                "Vanishing or exploding gradients",
+                "Slow convergence of learning rate",
+                "Inconsistent loss values"
+            ],
+            "answer": "Vanishing or exploding gradients"
+        }
+    ],
+    "16": [
+        {
+            "question": "What optimizer is used in the training process of DeepSeekV2?",
+            "options": [
+                "Adam",
+                "AdamW",
+                "SGD",
+                "RMSProp"
+            ],
+            "answer": "AdamW"
+        },
+        {
+            "question": "What role does the OneCycleLR scheduler play in training DeepSeekV2?",
+            "options": [
+                "It controls the batch size",
+                "It increases the learning rate initially and then decreases it",
+                "It selects the optimizer",
+                "It computes the forward pass"
+            ],
+            "answer": "It increases the learning rate initially and then decreases it"
+        },
+        {
+            "question": "Which loss function is used in the training of DeepSeekV2?",
+            "options": [
+                "Mean Squared Error",
+                "Cross-entropy loss",
+                "Huber loss",
+                "Binary Cross-entropy"
+            ],
+            "answer": "Cross-entropy loss"
+        },
+        {
+            "question": "What technique is used to speed up training without sacrificing model performance in DeepSeekV2?",
+            "options": [
+                "Data augmentation",
+                "Batch normalization",
+                "Automatic mixed precision (AMP)",
+                "Gradient clipping"
+            ],
+            "answer": "Automatic mixed precision (AMP)"
+        }
+    ],
+    "17": [
+        {
+            "question": "What does Multi-head Latent Attention (MLA) primarily help reduce?",
+            "options": [
+                "Computation time",
+                "Memory footprint",
+                "Model size",
+                "Accuracy loss"
+            ],
+            "answer": "Memory footprint"
+        },
+        {
+            "question": "In which model is the Multi-head Latent Attention (MLA) integrated?",
+            "options": [
+                "DeepSeek-V1",
+                "DeepSeek-V2",
+                "Transformers",
+                "MemoryNet"
+            ],
+            "answer": "DeepSeek-V2"
+        },
+        {
+            "question": "What is the main benefit of integrating MLA in transformer-based models?",
+            "options": [
+                "Better scalability with computational resources",
+                "Improved data preprocessing",
+                "Faster model training",
+                "Reduction in model complexity"
+            ],
+            "answer": "Better scalability with computational resources"
+        }
+    ]
+}

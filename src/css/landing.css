@@ -1,0 +1,150 @@
+.logo {
+  font-family: "Chewy", system-ui;
+  font-weight: 600;
+  font-style: normal;
+  color: #ff9600;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 16%;
+  padding: 1.5rem 2.1rem;
+  border-right: 1px solid #37464f;
+  height: 100vh;
+  background-color: hsl(var(--backgroundLight));
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1.1rem;
+  background-color: hsl(var(--muted));
+  border: 2px solid hsl(var(--muted-foreground));
+  border-radius: 0.8rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+
+.active > span {
+  color: hsl(var(--muted-foreground));
+  margin-left: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.inactive {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.8rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+
+.inactive > span {
+  color: white;
+  margin-left: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 2px solid #52656d;
+  width: 50%;
+  padding: 0.5rem 1rem;
+}
+
+.header > span {
+  color: #52656d;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cards {
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 90vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background-color: hsl(var(--muted));
+  width: 50%;
+  border-radius: 16px;
+  padding: 1.4rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.main__title {
+  color: hsl(var(--muted-foreground));
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.sub__title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+
+.tqdm__main {
+  width: 80%;
+  margin-top: 1.5rem;
+}
+
+.tqdm__outer {
+  width: 100%;
+  background-color: #131f24;
+  border-radius: 10px;
+  padding: 2px;
+  height: 24px;
+}
+
+.tqdm__inner {
+  height: 100%;
+  background-color: #93d333;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.start {
+  background-color: #1cb0f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.9rem;
+  width: 45%;
+  margin-top: 2rem;
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}

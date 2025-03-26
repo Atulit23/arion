@@ -1,0 +1,916 @@
+{
+    "1": [
+        {
+            "question": "What does LSTM stand for?",
+            "options": [
+                "Long Short-Term Memory",
+                "Long Simple-Term Memory",
+                "Linear Short-Term Memory",
+                "Linear Simple-Term Memory"
+            ],
+            "answer": "Long Short-Term Memory"
+        },
+        {
+            "question": "What is the primary goal of LSTM?",
+            "options": [
+                "To handle sequence data and capture long-term dependencies",
+                "To perform simple classification tasks",
+                "To process images",
+                "To reduce the training time of RNNs"
+            ],
+            "answer": "To handle sequence data and capture long-term dependencies"
+        },
+        {
+            "question": "What is the main issue that traditional RNNs face, which LSTMs aim to solve?",
+            "options": [
+                "Vanishing gradients",
+                "Slow computation",
+                "Overfitting",
+                "Poor generalization"
+            ],
+            "answer": "Vanishing gradients"
+        },
+        {
+            "question": "Which LSTM gate is responsible for controlling which part of the memory should be used as the output?",
+            "options": [
+                "Output gate",
+                "Input gate",
+                "Forget gate",
+                "Activation gate"
+            ],
+            "answer": "Output gate"
+        }
+    ],
+    "2": [
+        {
+            "question": "What is the purpose of the sigmoid function in LSTM?",
+            "options": [
+                "To classify data into probabilities",
+                "To squash input values between 0 and 1",
+                "To adjust model parameters during training",
+                "To handle both positive and negative values"
+            ],
+            "answer": "To squash input values between 0 and 1"
+        },
+        {
+            "question": "Which library is specifically mentioned for the softmax function in LSTM implementation?",
+            "options": [
+                "numpy",
+                "matplotlib",
+                "scipy",
+                "IPython"
+            ],
+            "answer": "scipy"
+        },
+        {
+            "question": "What does the tanh function do in LSTM?",
+            "options": [
+                "Squashes input values between 0 and 1",
+                "Clamps values between -1 and 1",
+                "Classifies data into probabilities",
+                "Adjusts model parameters"
+            ],
+            "answer": "Clamps values between -1 and 1"
+        },
+        {
+            "question": "Which function is used to compute numerically stable softmax values?",
+            "options": [
+                "sigmoid",
+                "logsumexp",
+                "tanh",
+                "exp"
+            ],
+            "answer": "logsumexp"
+        }
+    ],
+    "3": [
+        {
+            "question": "What is the primary role of optimizers in training neural networks?",
+            "options": [
+                "To update the model's parameters to minimize the loss function",
+                "To increase the model's complexity",
+                "To adjust the model's architecture",
+                "To calculate the loss function"
+            ],
+            "answer": "To update the model's parameters to minimize the loss function"
+        },
+        {
+            "question": "What is the purpose of the learning rate in the optimization process?",
+            "options": [
+                "To control how much the parameters are adjusted during each update",
+                "To calculate the gradient",
+                "To limit the size of the gradient",
+                "To update the model's architecture"
+            ],
+            "answer": "To control how much the parameters are adjusted during each update"
+        },
+        {
+            "question": "What does gradient clipping prevent in neural network training?",
+            "options": [
+                "Exploding gradients",
+                "Overfitting",
+                "Vanishing gradients",
+                "Learning rate issues"
+            ],
+            "answer": "Exploding gradients"
+        },
+        {
+            "question": "How do optimizers reduce the error in a neural network over time?",
+            "options": [
+                "By iterating over layers and adjusting parameters based on gradients",
+                "By changing the model architecture",
+                "By increasing the learning rate",
+                "By calculating the loss function repeatedly"
+            ],
+            "answer": "By iterating over layers and adjusting parameters based on gradients"
+        }
+    ],
+    "4": [
+        {
+            "question": "What is the purpose of the LSTMOptimizer class?",
+            "options": [
+                "To initialize the layers of a model",
+                "To update the parameters of a model during training",
+                "To apply activation functions in a model",
+                "To define the structure of the model"
+            ],
+            "answer": "To update the parameters of a model during training"
+        },
+        {
+            "question": "What is the role of the _update_rule method in LSTMOptimizer?",
+            "options": [
+                "To initialize the optimizer",
+                "To apply gradient clipping",
+                "To update model parameters in the base class",
+                "To define the specific rule for updating parameters in subclasses"
+            ],
+            "answer": "To define the specific rule for updating parameters in subclasses"
+        },
+        {
+            "question": "Which of the following is true about the subclasses of LSTMOptimizer?",
+            "options": [
+                "They are used for defining the model's architecture",
+                "They provide specific implementations for updating the model's parameters",
+                "They initialize the optimizer with default settings",
+                "They only implement the _update_rule method"
+            ],
+            "answer": "They provide specific implementations for updating the model's parameters"
+        }
+    ],
+    "5": [
+        {
+            "question": "What is the purpose of AdaGrad in optimization?",
+            "options": [
+                "To adapt the learning rate for each parameter based on past gradients",
+                "To eliminate the need for gradient clipping",
+                "To initialize the learning rate based on the input data",
+                "To calculate the loss function"
+            ],
+            "answer": "To adapt the learning rate for each parameter based on past gradients"
+        },
+        {
+            "question": "Which method in the Loss class calculates the gradient of the loss with respect to the inputs?",
+            "options": [
+                "forward",
+                "backward",
+                "_output",
+                "_input_grad"
+            ],
+            "answer": "backward"
+        },
+        {
+            "question": "What does the AdaGrad update rule do to the learning rate?",
+            "options": [
+                "Increases the learning rate for frequently updated parameters",
+                "Decreases the learning rate for frequently updated parameters",
+                "Keeps the learning rate constant for all parameters",
+                "Sets the learning rate to zero"
+            ],
+            "answer": "Decreases the learning rate for frequently updated parameters"
+        },
+        {
+            "question": "Which class in the given content is responsible for calculating and propagating errors in neural networks?",
+            "options": [
+                "AdaGrad",
+                "Loss",
+                "SoftmaxCrossEntropy",
+                "GradientClipping"
+            ],
+            "answer": "Loss"
+        }
+    ],
+    "6": [
+        {
+            "question": "What role does the AdaGrad algorithm play in machine learning?",
+            "options": [
+                "It adjusts the learning rate based on the sum of squared gradients for each parameter.",
+                "It updates parameters at a constant learning rate for all parameters.",
+                "It uses a fixed learning rate for all updates.",
+                "It adjusts the learning rate based on the weight of each parameter."
+            ],
+            "answer": "It adjusts the learning rate based on the sum of squared gradients for each parameter."
+        },
+        {
+            "question": "What is the purpose of the '_update_rule' method in the AdaGrad algorithm?",
+            "options": [
+                "To initialize the model parameters.",
+                "To reduce the learning rate for parameters updated more frequently.",
+                "To increase the learning rate for parameters that are updated less frequently.",
+                "To calculate the Softmax probabilities."
+            ],
+            "answer": "To reduce the learning rate for parameters updated more frequently."
+        },
+        {
+            "question": "What does the Softmax function do in classification tasks?",
+            "options": [
+                "Converts raw model outputs (logits) into probabilities.",
+                "Calculates the loss function for training.",
+                "Updates the model parameters during training.",
+                "Normalizes the inputs before feeding them to the model."
+            ],
+            "answer": "Converts raw model outputs (logits) into probabilities."
+        },
+        {
+            "question": "What is the purpose of the epsilon value (eps) in the SoftmaxCrossEntropy class constructor?",
+            "options": [
+                "To avoid division by zero during probability calculations.",
+                "To adjust the learning rate during training.",
+                "To store the predicted class labels.",
+                "To initialize the model parameters."
+            ],
+            "answer": "To avoid division by zero during probability calculations."
+        }
+    ],
+    "7": [
+        {
+            "question": "What is the purpose of applying softmax in the given code snippet?",
+            "options": [
+                "To normalize the model's predictions into probabilities",
+                "To compute the gradient for backpropagation",
+                "To reduce the computation time",
+                "To clip the predicted values between epsilon and 1 minus epsilon"
+            ],
+            "answer": "To normalize the model's predictions into probabilities"
+        },
+        {
+            "question": "Why are the probabilities clipped between epsilon and 1 minus epsilon?",
+            "options": [
+                "To prevent division by zero errors",
+                "To avoid issues like log(0) during computation",
+                "To speed up the computation process",
+                "To increase the accuracy of predictions"
+            ],
+            "answer": "To avoid issues like log(0) during computation"
+        },
+        {
+            "question": "What is the role of the _input_grad function in the code?",
+            "options": [
+                "To calculate the cross-entropy loss",
+                "To calculate the gradient of the loss with respect to the input",
+                "To compute the final loss value",
+                "To update the model weights"
+            ],
+            "answer": "To calculate the gradient of the loss with respect to the input"
+        },
+        {
+            "question": "How is the cross-entropy loss computed in the code?",
+            "options": [
+                "By comparing the predicted probabilities to the true target values",
+                "By applying the softmax function to the target values",
+                "By summing the predicted probabilities",
+                "By subtracting the target values from the predicted probabilities"
+            ],
+            "answer": "By comparing the predicted probabilities to the true target values"
+        }
+    ],
+    "8": [
+        {
+            "question": "What does the forward method of the LSTMNode class compute?",
+            "options": [
+                "The backward pass of the LSTM",
+                "The forward pass of the LSTM",
+                "The loss function of the LSTM",
+                "The cell state of the LSTM"
+            ],
+            "answer": "The forward pass of the LSTM"
+        },
+        {
+            "question": "Which gate in the LSTM determines how much of the previous cell state should be retained?",
+            "options": [
+                "Input gate",
+                "Forget gate",
+                "Output gate",
+                "Candidate gate"
+            ],
+            "answer": "Forget gate"
+        },
+        {
+            "question": "What is used to update the cell state (C_out) in the LSTM?",
+            "options": [
+                "Output gate's output",
+                "Forget gate's output and input gate's output",
+                "Hidden state",
+                "Current time step's input"
+            ],
+            "answer": "Forget gate's output and input gate's output"
+        },
+        {
+            "question": "What regulates how much of the cell state is exposed to the next time step in the LSTM?",
+            "options": [
+                "Forget gate",
+                "Output gate",
+                "Input gate",
+                "Hidden state"
+            ],
+            "answer": "Output gate"
+        }
+    ],
+    "9": [
+        {
+            "question": "What is the first step in the backward pass of an LSTM network?",
+            "options": [
+                "Calculating the gradient of the output weight (W_v)",
+                "Calculating the gradient of the hidden state (dh_out)",
+                "Calculating the gradient of the cell state (dC_out)",
+                "Updating the weights and biases"
+            ],
+            "answer": "Calculating the gradient of the output weight (W_v)"
+        },
+        {
+            "question": "Which activation function is used for calculating the gradient of the cell state in an LSTM?",
+            "options": [
+                "ReLU",
+                "Sigmoid",
+                "Tanh",
+                "Softmax"
+            ],
+            "answer": "Tanh"
+        },
+        {
+            "question": "Which gate's gradient is computed by backpropagating through its respective activations in an LSTM?",
+            "options": [
+                "Forget gate (f)",
+                "Output gate (o)",
+                "Input gate (i)",
+                "All of the above"
+            ],
+            "answer": "All of the above"
+        },
+        {
+            "question": "What is the purpose of calculating the hidden state gradient (dh_out) in the backward pass of an LSTM?",
+            "options": [
+                "To update the output weight (W_v)",
+                "To combine the gradient of the output and incoming hidden state gradient",
+                "To compute the cell state gradient (dC_out)",
+                "To calculate the output gate gradient"
+            ],
+            "answer": "To combine the gradient of the output and incoming hidden state gradient"
+        }
+    ],
+    "10": [
+        {
+            "question": "What is the first step in the backward pass of an LSTM network?",
+            "options": [
+                "Compute the gradient for the output weight and bias",
+                "Calculate the hidden state gradient",
+                "Update the parameters for each gate",
+                "Backpropagate the hidden state gradient"
+            ],
+            "answer": "Compute the gradient for the output weight and bias"
+        },
+        {
+            "question": "How is the gradient for the output gate (o) calculated in the backward pass?",
+            "options": [
+                "By taking the dot product of the transpose of the hidden state",
+                "By multiplying the hidden state gradient with the tanh of the current cell state",
+                "By applying the chain rule to the forget gate",
+                "By computing the gradient of the input gate"
+            ],
+            "answer": "By multiplying the hidden state gradient with the tanh of the current cell state"
+        },
+        {
+            "question": "What is the primary purpose of using the chain rule in the backward pass?",
+            "options": [
+                "To update the parameters of the output gate",
+                "To compute the gradients for the candidate cell state and cell state",
+                "To backpropagate the hidden state gradient to the previous time step",
+                "To calculate the gradient for the output weight and bias"
+            ],
+            "answer": "To compute the gradients for the candidate cell state and cell state"
+        },
+        {
+            "question": "What happens after the gradients for the gates are computed in the backward pass?",
+            "options": [
+                "They are used to update the weights and biases of each gate",
+                "They are stored for future computations",
+                "They are passed to the previous time step for further backpropagation",
+                "They are discarded after use"
+            ],
+            "answer": "They are used to update the weights and biases of each gate"
+        }
+    ],
+    "11": [
+        {
+            "question": "What is the first critical step in the backpropagation process of an LSTM network?",
+            "options": [
+                "Computation of cell state gradients",
+                "Computation of hidden state gradients",
+                "Computation of output gradients",
+                "Computation of weight gradients"
+            ],
+            "answer": "Computation of cell state gradients"
+        },
+        {
+            "question": "Which gates' gradients are computed during backpropagation in an LSTM network?",
+            "options": [
+                "Forget gate, input gate, and output gate",
+                "Input gate, cell candidate, and output gate",
+                "Forget gate, input gate, and cell candidate",
+                "Output gate, cell candidate, and forget gate"
+            ],
+            "answer": "Forget gate, input gate, and cell candidate"
+        },
+        {
+            "question": "What is the role of the gradients computed during backpropagation in an LSTM network?",
+            "options": [
+                "To adjust the weights and biases of the network",
+                "To update the learning rate",
+                "To compute the loss function",
+                "To adjust the input size"
+            ],
+            "answer": "To adjust the weights and biases of the network"
+        },
+        {
+            "question": "What happens after the gradients for the gates are computed in an LSTM network?",
+            "options": [
+                "Parameter updates are made by calculating gradients for the weights and biases",
+                "The model training stops",
+                "The weights and biases are reset to zero",
+                "The cell state gradients are recalculated"
+            ],
+            "answer": "Parameter updates are made by calculating gradients for the weights and biases"
+        }
+    ],
+    "12": [
+        {
+            "question": "What is the purpose of the _init_ method in the LSTMLayer class?",
+            "options": [
+                "To define the necessary hyperparameters for LSTM training",
+                "To initialize the hidden state and cell state to zeros",
+                "To initialize weights and biases for the LSTM gates",
+                "To ensure the LSTM layer can process sequential data"
+            ],
+            "answer": "To initialize the hidden state and cell state to zeros"
+        },
+        {
+            "question": "Which gate's weights and biases are initialized in the _init_params method of the LSTMLayer?",
+            "options": [
+                "Forget gate",
+                "Input gate",
+                "Cell candidate",
+                "All of the above"
+            ],
+            "answer": "All of the above"
+        },
+        {
+            "question": "How are the weights for the LSTM gates initialized?",
+            "options": [
+                "Using a random uniform distribution",
+                "Using a random normal distribution, scaled by a weight scale factor",
+                "Set to fixed values for each gate",
+                "Random values between -1 and 1"
+            ],
+            "answer": "Using a random normal distribution, scaled by a weight scale factor"
+        },
+        {
+            "question": "What does the vocab_size in the LSTMLayer represent?",
+            "options": [
+                "The number of unique words in the input data",
+                "The size of the input data",
+                "The output size of the LSTM layer",
+                "The length of the input sequence"
+            ],
+            "answer": "The number of unique words in the input data"
+        }
+    ],
+    "13": [
+        {
+            "question": "What does the 'hidden_size' represent in the __init__ method of an LSTM network?",
+            "options": [
+                "The number of layers in the network",
+                "The size of the output vector",
+                "The number of hidden units in the LSTM cells",
+                "The standard deviation of weight initialization"
+            ],
+            "answer": "The number of hidden units in the LSTM cells"
+        },
+        {
+            "question": "Which of the following parameters defines the size of the output vector in the __init__ method of an LSTM?",
+            "options": [
+                "hidden_size",
+                "output_size",
+                "start_H",
+                "first"
+            ],
+            "answer": "output_size"
+        },
+        {
+            "question": "What is the purpose of 'weight_scale' in the __init__ method of an LSTM network?",
+            "options": [
+                "To define the number of hidden units",
+                "To initialize the hidden and cell states",
+                "To set the standard deviation for initializing weights",
+                "To ensure initialization happens only once"
+            ],
+            "answer": "To set the standard deviation for initializing weights"
+        },
+        {
+            "question": "What is the initial value of 'start_H' and 'start_C' in the __init__ method of an LSTM network?",
+            "options": [
+                "Random values",
+                "Zeros",
+                "Ones",
+                "Null"
+            ],
+            "answer": "Zeros"
+        }
+    ],
+    "14": [
+        {
+            "question": "What is the purpose of the _init_params method in an LSTM network?",
+            "options": [
+                "To initialize the weights and biases for the gates and output layer",
+                "To set up the loss function for training the network",
+                "To implement the forward pass in the LSTM",
+                "To train the model with input data"
+            ],
+            "answer": "To initialize the weights and biases for the gates and output layer"
+        },
+        {
+            "question": "What does the vocab_size represent in the LSTM initialization?",
+            "options": [
+                "The number of time steps in the sequence",
+                "The size of the input feature vector at each time step",
+                "The number of layers in the LSTM network",
+                "The number of output classes in the network"
+            ],
+            "answer": "The size of the input feature vector at each time step"
+        },
+        {
+            "question": "How are the weights (W_f, W_i, W_c, W_o) initialized in the LSTM?",
+            "options": [
+                "With values from a uniform distribution",
+                "With values drawn from a normal distribution with a mean of 0.0 and a standard deviation defined by 'weight_scale'",
+                "With zeros",
+                "With large random values"
+            ],
+            "answer": "With values drawn from a normal distribution with a mean of 0.0 and a standard deviation defined by 'weight_scale'"
+        },
+        {
+            "question": "Why are the derivatives of each parameter initialized to zero in the _init_params method?",
+            "options": [
+                "To prevent the model from overfitting",
+                "To track the gradients during the backpropagation process",
+                "To ensure all parameters start with the same value",
+                "To speed up the training process"
+            ],
+            "answer": "To track the gradients during the backpropagation process"
+        }
+    ],
+    "15": [
+        {
+            "question": "What is the first step in the forward pass of an LSTM?",
+            "options": [
+                "Initialize parameters with '_init_params'",
+                "Compute the gradients for weight updates",
+                "Propagate errors backward through the sequence",
+                "Update the model's parameters"
+            ],
+            "answer": "Initialize parameters with '_init_params'"
+        },
+        {
+            "question": "What does the backward pass of an LSTM compute?",
+            "options": [
+                "Updates the internal states of the LSTM cells",
+                "Calculates gradients for weight updates",
+                "Generates outputs for each time step",
+                "Computes the hidden and cell states"
+            ],
+            "answer": "Calculates gradients for weight updates"
+        },
+        {
+            "question": "In the forward pass, what is updated after processing the full sequence?",
+            "options": [
+                "The gradients for the LSTM cells",
+                "The mean of the batch-wise states for the next sequence",
+                "The weights and biases of the LSTM cells",
+                "The hidden and cell states of the batch"
+            ],
+            "answer": "The mean of the batch-wise states for the next sequence"
+        },
+        {
+            "question": "What role do the hidden (H_in) and cell (C_in) states play during the forward pass?",
+            "options": [
+                "They store the output for each time step",
+                "They help in calculating gradients during the backward pass",
+                "They are initialized and repeated across the batch for parallel processing",
+                "They compute the weight updates for the model"
+            ],
+            "answer": "They are initialized and repeated across the batch for parallel processing"
+        }
+    ],
+    "16": [
+        {
+            "question": "What is the first step in the forward pass of an LSTM layer?",
+            "options": [
+                "Initializing the hidden and cell states",
+                "Calling the forward method of the LSTM cell",
+                "Initializing the parameters using '_init_params' method",
+                "Extracting the input features for each time step"
+            ],
+            "answer": "Initializing the parameters using '_init_params' method"
+        },
+        {
+            "question": "How are the hidden state (H_in) and cell state (C_in) initialized during the first run of the LSTM?",
+            "options": [
+                "They are initialized randomly",
+                "They are initialized from start_H and start_C",
+                "They are copied from the input sequence",
+                "They are initialized to zero"
+            ],
+            "answer": "They are initialized from start_H and start_C"
+        },
+        {
+            "question": "What happens after processing the entire sequence in the LSTM forward pass?",
+            "options": [
+                "The initial hidden and cell states are reset to zero",
+                "The output for each time step is discarded",
+                "The initial hidden and cell states are updated by averaging the batch-wise states",
+                "The output array is cleared"
+            ],
+            "answer": "The initial hidden and cell states are updated by averaging the batch-wise states"
+        },
+        {
+            "question": "What is stored in the output array during the LSTM forward pass?",
+            "options": [
+                "The input features for each time step",
+                "The updated hidden and cell states",
+                "The output for each time step",
+                "The average of the batch-wise states"
+            ],
+            "answer": "The output for each time step"
+        }
+    ],
+    "17": [
+        {
+            "question": "What does the LSTM model primarily process?",
+            "options": [
+                "Image data",
+                "Sequential data",
+                "Audio data",
+                "Text data"
+            ],
+            "answer": "Sequential data"
+        },
+        {
+            "question": "In which method is backpropagation performed in an LSTM model?",
+            "options": [
+                "forward method",
+                "backward method",
+                "single_step method",
+                "init method"
+            ],
+            "answer": "backward method"
+        },
+        {
+            "question": "What is the purpose of the 'single_step' method in an LSTM model?",
+            "options": [
+                "It initializes the LSTM model",
+                "It combines forward and backward passes for one iteration",
+                "It processes the input batch",
+                "It computes the sequence length"
+            ],
+            "answer": "It combines forward and backward passes for one iteration"
+        },
+        {
+            "question": "Which method in the LSTM model is responsible for updating weights and biases?",
+            "options": [
+                "forward method",
+                "backward method",
+                "single_step method",
+                "init method"
+            ],
+            "answer": "single_step method"
+        }
+    ],
+    "18": [
+        {
+            "question": "What is the purpose of the 'Backward Pass' in neural network training?",
+            "options": [
+                "To calculate the loss gradient",
+                "To propagate the loss gradient backward through the model",
+                "To initialize the model parameters",
+                "To update the model's weights without any loss gradient"
+            ],
+            "answer": "To propagate the loss gradient backward through the model"
+        },
+        {
+            "question": "Which method is typically used to perform the 'Backward Pass' in neural networks?",
+            "options": [
+                "forward",
+                "train",
+                "backward",
+                "optimize"
+            ],
+            "answer": "backward"
+        },
+        {
+            "question": "What does the 'Backward Pass' allow the neural network model to do?",
+            "options": [
+                "Adjust its parameters to minimize the error or loss",
+                "Increase the error or loss",
+                "Visualize the neural network",
+                "Freeze the model weights"
+            ],
+            "answer": "Adjust its parameters to minimize the error or loss"
+        },
+        {
+            "question": "During the 'Backward Pass', what is updated in the neural network?",
+            "options": [
+                "Activation functions",
+                "Parameters (weights and biases)",
+                "The input layer",
+                "The training dataset"
+            ],
+            "answer": "Parameters (weights and biases)"
+        }
+    ],
+    "19": [
+        {
+            "question": "What is the first phase of a single training step in machine learning?",
+            "options": [
+                "Backward Pass",
+                "Gradient Calculation",
+                "Forward Pass",
+                "Return Loss"
+            ],
+            "answer": "Forward Pass"
+        },
+        {
+            "question": "What is calculated during the 'Gradient Calculation' phase?",
+            "options": [
+                "Predictions",
+                "Loss",
+                "Weights",
+                "Gradient of the Loss"
+            ],
+            "answer": "Gradient of the Loss"
+        },
+        {
+            "question": "What does the model do after the 'Gradient Calculation' phase?",
+            "options": [
+                "Clear the gradients",
+                "Return the loss",
+                "Update the weights",
+                "Generate predictions"
+            ],
+            "answer": "Clear the gradients"
+        },
+        {
+            "question": "What is the purpose of the 'Return Loss' phase in a training step?",
+            "options": [
+                "To generate predictions",
+                "To update weights",
+                "To monitor and print the loss",
+                "To calculate the gradient"
+            ],
+            "answer": "To monitor and print the loss"
+        }
+    ],
+    "21": [
+        {
+            "question": "What is the purpose of the softmax function in the described process?",
+            "options": [
+                "To convert the model's output into probabilities",
+                "To select the next character based on probabilities",
+                "To initialize the input sequence",
+                "To calculate the loss"
+            ],
+            "answer": "To convert the model's output into probabilities"
+        },
+        {
+            "question": "What is the role of one-hot encoding in the text generation process?",
+            "options": [
+                "To compute the loss during training",
+                "To represent each character as a vector of zeros except for one index",
+                "To monitor training progress",
+                "To update the model's weights"
+            ],
+            "answer": "To represent each character as a vector of zeros except for one index"
+        },
+        {
+            "question": "How often does the model generate a sample text during training?",
+            "options": [
+                "Every 10 iterations",
+                "Every 50 iterations",
+                "Every 100 iterations",
+                "Every 200 iterations"
+            ],
+            "answer": "Every 100 iterations"
+        },
+        {
+            "question": "What is tracked during training to monitor the model's progress?",
+            "options": [
+                "The number of batches",
+                "The moving average of the loss",
+                "The output character sequence",
+                "The number of input-output pairs"
+            ],
+            "answer": "The moving average of the loss"
+        }
+    ],
+    "23": [
+        {
+            "question": "What is the hidden size of each LSTM layer in the model?",
+            "options": [
+                "128",
+                "256",
+                "512",
+                "1024"
+            ],
+            "answer": "256"
+        },
+        {
+            "question": "Which optimizer is used in the training process?",
+            "options": [
+                "Adam",
+                "Stochastic Gradient Descent (SGD)",
+                "RMSprop",
+                "Adagrad"
+            ],
+            "answer": "Stochastic Gradient Descent (SGD)"
+        },
+        {
+            "question": "What is the sequence length configured for the model?",
+            "options": [
+                "5",
+                "10",
+                "20",
+                "50"
+            ],
+            "answer": "10"
+        },
+        {
+            "question": "How often are updates made during the training process?",
+            "options": [
+                "Every 10 iterations",
+                "Every 50 iterations",
+                "Every 100 iterations",
+                "Every 500 iterations"
+            ],
+            "answer": "Every 100 iterations"
+        }
+    ],
+    "24": [
+        {
+            "question": "What happens if the batch size exceeds the available data length during the training process?",
+            "options": [
+                "The training stops immediately.",
+                "The start position is reset.",
+                "The model's performance decreases.",
+                "The data is discarded."
+            ],
+            "answer": "The start position is reset."
+        },
+        {
+            "question": "What function is used to compute the loss during training?",
+            "options": [
+                "ReLU",
+                "SoftmaxCrossEntropy",
+                "Mean Squared Error",
+                "Adam"
+            ],
+            "answer": "SoftmaxCrossEntropy"
+        },
+        {
+            "question": "How is the loss tracked during the training process?",
+            "options": [
+                "By using a moving average.",
+                "By calculating the mean of all predictions.",
+                "By performing backpropagation.",
+                "By adjusting the optimizer."
+            ],
+            "answer": "By using a moving average."
+        },
+        {
+            "question": "What happens after each batch is processed in the training loop?",
+            "options": [
+                "The model is reset.",
+                "The start position is incremented.",
+                "The optimizer is reset.",
+                "The input data is shuffled."
+            ],
+            "answer": "The start position is incremented."
+        }
+    ]
+}
