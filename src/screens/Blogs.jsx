@@ -4,8 +4,10 @@ import Learn from "../icons/learn.svg";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import CurrentCard from "../components/CurrentCard";
+import { useSelector } from "react-redux";
 
 export default function Blogs() {
+  const userData = useSelector((state) => state.app.userData);
 
   const data = [
     {

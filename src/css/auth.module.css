@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 22%;
+    height: 61vh;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    border: 1px solid white;
+    align-items: center;
+    border-radius: 0.4rem;
+}
+
+.header {
+    font-family: "Chewy", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    color: #ff9600;
+    font-size: 3rem;
+    margin-bottom: 0.9rem;
+    cursor: pointer;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.current {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.current>span {
+    font-size: 0.9rem;
+    color: whitesmoke;
+    position: relative;
+    background-color: hsl(var(--background));
+    top: -0.3rem;
+    left: 0.3rem;
+    /* width: 3.7rem;
+    text-align: center; */
+}
+
+.input {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 0.6rem;
+    outline: none;
+}
+
+.input::placeholder {
+    color: #9f9f9f;
+    font-size: 0.9rem;
+}
+
+.btn {
+    width: 100%;
+    color: white;
+    background-color: #ff9600;
+    padding: 0.7rem 0.9rem;
+    font-size: 1.05rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.already {
+    color: #e48200;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1.15rem;
+}
+
+.already:hover {
+    text-decoration: underline;
+}

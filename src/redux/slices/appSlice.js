@@ -4,7 +4,8 @@ const initialState = {
   chosen: {},
   level: 0,
   answers: {},
-  currentData: {}
+  currentData: {},
+  userData: {}
 };
 
 const appSlice = createSlice({
@@ -23,8 +24,11 @@ const appSlice = createSlice({
     storeCurrentData: (state, action) => {
       state.currentData = action.payload
     },
+    storeUser: (state, action) => {
+      state.userData = action.payload
+    }
   },
 });
 
-export const { choose, chooseLevel, storeAnswers, storeCurrentData } = appSlice.actions;
+export const { choose, chooseLevel, storeAnswers, storeCurrentData, storeUser } = appSlice.actions;
 export default appSlice.reducer;

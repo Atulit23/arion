@@ -13,18 +13,24 @@ import Blogs from "./screens/Blogs";
 import CurrentLesson from "./screens/CurrentLesson";
 import TakeQuiz from "./screens/TakeQuiz";
 import GetResults from "./screens/GetResults";
+import Signup from "./screens/Signup";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
 
-  const location = useLocation(); 
-
+  const location = useLocation();
   return (
     <div className="App">
-      {(!location.pathname.includes("/current") && !location.pathname.includes("/take-quiz") && !location.pathname.includes("/results")) && <Sidebar />}
+      {!location.pathname.includes("current") &&
+        !location.pathname.includes("take-quiz") &&
+        !location.pathname.includes("results") &&
+        !location.pathname.includes("signup") && <Sidebar />}
       <Routes>
+        <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Blogs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/learn" element={<Learn />} />
@@ -39,6 +45,7 @@ function App() {
 export default function WrappedApp() {
   return (
     <Router>
+      <ToastContainer position="top-right" autoClose={3000} />;
       <App />
     </Router>
   );

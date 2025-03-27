@@ -10,3 +10,8 @@
 span {
   font-family: 'Inter', sans-serif;
 }
+
+body {
+  overflow-y: hidden;
+  background-color: hsl(var(--background));
+}

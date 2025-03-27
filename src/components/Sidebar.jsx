@@ -51,7 +51,7 @@ export default function Sidebar() {
           navigate("/buy");
         }}>
         <img src={Learn} alt="" className="learn__img" />
-        <span className="learn__text">BUY ME DRUGS</span>
+        <span className="learn__text">BUY DRUGS</span>
       </div>
     </div>
   );
