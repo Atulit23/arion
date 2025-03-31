@@ -7,15 +7,17 @@
 }
 
 .main {
-    width: 22%;
-    height: 61vh;
-    padding: 1.5rem 2rem;
+    width: 20%;
+    padding: 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    border: 1px solid white;
-    align-items: center;
     border-radius: 0.4rem;
+    margin-top: -6rem;
+    margin-left: 1rem;
+}
+
+.logo__section {
+    display: flex;
 }
 
 .header {
@@ -23,9 +25,25 @@
     font-weight: 600;
     font-style: normal;
     color: #ff9600;
-    font-size: 3rem;
-    margin-bottom: 0.9rem;
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
     cursor: pointer;
+}
+
+.info {
+    color: #fff;
+    font-size: 1.08rem;
+    font-family: 'Inter', sans-serif;
+    margin-top: -0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    width: 8rem;
+    height: 6rem;
+    margin-right: -1.5rem;
+    margin-left: -3rem;
+    margin-top: 0.1rem;
 }
 
 .all {
@@ -37,39 +55,45 @@
 .current {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .current>span {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: whitesmoke;
     position: relative;
     background-color: hsl(var(--background));
     top: -0.3rem;
     left: 0.3rem;
-    /* width: 3.7rem;
-    text-align: center; */
+    font-weight: bold;
 }
 
 .input {
-    width: 100%;
+    width: 94%;
     font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    padding: 0.7rem 0.9rem;
+    font-size: 1.05rem;
+    padding: 0.6rem 0.9rem 0.6rem 3rem;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid rgb(113 113 122/var(--tw-border-opacity,1));
     color: white;
     border-radius: 0.6rem;
+    /* outline: none; */
+}
+
+.input:focus {
+    transition: 0.3s;
     outline: none;
+    border: 1px solid #ff9600;
+    /* box-shadow: 0 0 0.5rem #ff9600; */
 }
 
 .input::placeholder {
-    color: #9f9f9f;
-    font-size: 0.9rem;
+    color: rgb(113 113 122/var(--tw-border-opacity,1));
+    font-size: 1.05rem;
 }
 
 .btn {
-    width: 100%;
+    width: 94%;
     color: white;
     background-color: #ff9600;
     padding: 0.7rem 0.9rem;
@@ -79,16 +103,25 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    margin-top: 1rem;
 }
 
 .already {
-    color: #e48200;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
+    width: 94%;
     margin-top: 1.15rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.already:hover {
-    text-decoration: underline;
+.already > span {
+    color: #e48200;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+
+.user {
+    position: absolute;
+    width: 1.35rem;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
 }
