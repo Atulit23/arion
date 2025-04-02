@@ -54,7 +54,7 @@
 
 .current {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-bottom: 1rem;
 }
 
@@ -124,4 +124,16 @@
     width: 1.35rem;
     margin-top: 0.8rem;
     margin-left: 1rem;
+}
+
+.send__otp {
+    color: white;
+    border: 1px solid white;
+    border-radius: 0.75rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
 }

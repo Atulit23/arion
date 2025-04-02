@@ -9,6 +9,7 @@ import logo from "../icons/logo_new.png";
 import user from '../icons/user.png';
 import email from '../icons/email.png';
 import lock from '../icons/lock.png';
+import password from '../icons/password.png';
 
 export default function Signup() {
   const [fields, setFields] = useState({
@@ -86,7 +87,7 @@ export default function Signup() {
           </div>
           <div className={styles.current}>
             {/* {<span>Password</span>} */}
-            <img src={lock} alt="" className={styles.user} />
+            <img src={password} alt="" className={styles.user} />
             <input
               type="text"
               placeholder="Confirm Password"
@@ -97,17 +98,25 @@ export default function Signup() {
               }}
             />
           </div>
-          {/* <div className={styles.current}>
+          <div className={styles.current}>
+            <img src={lock} alt="" className={styles.user} />
             <input
               type="text"
-              placeholder="Confirm Password"
-              value={fields.confirmPassword}
+              placeholder="OTP"
+              value={fields.otp}
               className={styles.input}
+              style={{
+                width: "54.5%",
+                marginRight: '1rem'
+              }}
               onChange={(e) => {
-                setFields({ ...fields, confirmPassword: e.target.value });
+                setFields({ ...fields, otp: e.target.value });
               }}
             />
-          </div> */}
+            <div className={styles.send__otp}>
+              Sent OTP
+            </div>
+          </div>
           <div
             className={styles.btn}
             onClick={() => {
