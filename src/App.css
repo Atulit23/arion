@@ -5,6 +5,7 @@
   width: 100%;
   display: flex;
   background-color: hsl(var(--background));
+  margin-top: -1.5rem;
 }
 
 span {

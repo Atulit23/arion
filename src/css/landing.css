@@ -3,7 +3,7 @@
   font-weight: 600;
   font-style: normal;
   color: #ff9600;
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   margin-bottom: 1.5rem;
   margin-left: 1.5rem;
   cursor: pointer;
@@ -18,7 +18,7 @@
 
 .sidebar {
   width: 18%;
-  padding: 1.5rem 2.1rem;
+  padding: 3rem 2.1rem;
   border-right: 1px solid #37464f;
   height: 100vh;
   background-color: hsl(var(--backgroundLight));

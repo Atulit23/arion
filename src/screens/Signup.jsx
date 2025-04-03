@@ -21,14 +21,14 @@ export default function Signup() {
   });
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.app.userData);
+  console.log(userData);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-  console.log(userData);
-  console.log(error);
 
   const signup = async () => {
     try {
       const res = await axios.post("http://localhost:8000/auth/signup", fields);
+      localStorage.setItem('token', res.data.token);
       dispatch(storeUser(res?.data?.newUser));
       navigate("/blogs");
     } catch (err) {

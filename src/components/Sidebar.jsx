@@ -30,7 +30,7 @@ export default function Sidebar() {
         <span className="learn__text">BOOKS</span>
       </div>
       <div className={route === "research-papers" ? "active" : "inactive"} onClick={() => { // in this add a search functionality too, that finds papers from the web
-          navigate("/add-yours");
+          navigate("/research-papers");
         }}>
         <img src={Learn} alt="" className="learn__img" />
         <span className="learn__text">RESEARCH PAPERS</span>
@@ -47,12 +47,12 @@ export default function Sidebar() {
         <img src={Learn} alt="" className="learn__img" />
         <span className="learn__text">DISCOVER</span>
       </div> */}
-      <div className={route === "buy" ? "active" : "inactive"} onClick={() => {
+      {/* <div className={route === "buy" ? "active" : "inactive"} onClick={() => {
           navigate("/buy");
         }}>
         <img src={Learn} alt="" className="learn__img" />
         <span className="learn__text">BUY DRUGS</span>
-      </div>
+      </div> */}
     </div>
   );
 }

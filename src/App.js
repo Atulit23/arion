@@ -16,6 +16,7 @@ import GetResults from "./screens/GetResults";
 import Signup from "./screens/Signup";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import AddYours from "./screens/AddYours";
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/current" element={<CurrentLesson />} />
         <Route path="/take-quiz" element={<TakeQuiz />} />
         <Route path="/results" element={<GetResults />} />
+        <Route path="/add-yours" element={<AddYours />} />
       </Routes>
     </div>
   );

@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/landing.css";
 import Learn from "../icons/learn.svg";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import CurrentCard from "../components/CurrentCard";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 export default function Blogs() {
   const userData = useSelector((state) => state.app.userData);
-
+  const [blogData, setBlogData] = useState([]);
   const data = [
     {
       id: 1,
@@ -54,6 +55,29 @@ export default function Blogs() {
     },
   ];
 
+  console.log(userData);
+
+  const getUserDocs = async (userId) => {
+    const token = localStorage.getItem('token');
+    try {
+      const res = await axios.get(
+        `http://localhost:8000/documents/getPrivateDocumentsByUserId?userId=${userId}`,
+        { 
+          headers: { Authorization: `Bearer ${token}` },
+          withCredentials: true 
+        }      );
+      console.log(res.data);
+      setBlogData(res.data?.documents);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getUserDocs(userData?._id);
+  }, [userData]);
+  console.log("Cookies:", document.cookie);
+
   return (
     <div className="main__container">
       <div className="middle">
@@ -61,7 +85,7 @@ export default function Blogs() {
           <span>Blogs</span>
         </div>
         <div className="cards">
-          {data?.map((item) => {
+          {blogData?.filter((elem) => elem?.type === "blog")?.map((item) => {
             return <CurrentCard data={item} />;
           })}
         </div>
