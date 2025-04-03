@@ -1,12 +1,25 @@
-.logo {
+.logo > span {
   font-family: "Chewy", system-ui;
   font-weight: 600;
   font-style: normal;
   color: #ff9600;
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  margin-left: 1.5rem;
+  font-size: 3.3rem;
+  margin-bottom: 0rem;
   cursor: pointer;
+  margin-left: -0.5rem;
+  margin-top: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: -1rem;
+  margin-bottom: 1rem;
+}
+
+.logo > img {
+  width: 6rem;
+  height: 4.6rem;
 }
 
 .main__container {
@@ -18,7 +31,7 @@
 
 .sidebar {
   width: 18%;
-  padding: 3rem 2.1rem;
+  padding: 3.2rem 2.1rem;
   border-right: 1px solid #37464f;
   height: 100vh;
   background-color: hsl(var(--backgroundLight));

@@ -2,6 +2,7 @@ import React from "react";
 import "../css/landing.css";
 import Learn from "../icons/learn.svg";
 import { useNavigate } from "react-router-dom";
+import logo from '../icons/logo_new.png'
 
 export default function Sidebar() {
   const navigate = useNavigate();
@@ -10,7 +11,10 @@ export default function Sidebar() {
   console.log(route);
   return (
     <div className="sidebar">
-      <div className="logo" onClick={() => navigate('/blogs')}>arion</div>
+      <div className="logo" onClick={() => navigate('/blogs')}>
+        <img src={logo} alt="" />
+        <span>arion</span>
+      </div>
       <div
         className={(route === "blogs" || route === "learn") ? "active" : "inactive"}
         onClick={() => {

@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import styles from "../css/yours.module.css";
 import book from "../icons/book.png";
+import upload from "../icons/upload.png";
+import ResearchPaper from "../components/ResearchPaper";
 
 export default function AddYours() {
   const [chosen, setChosen] = useState("");
+  const [name, setName] = useState("");
+  const [file, setFile] = useState(null);
+  const [loading, setLoading] = useState(false)
+  console.log(file)
 
-  return (
+  // will take name, file & type
+  const uploadFile = () => {
+
+  }
+
+  return loading === false ? chosen === "" ? (
     <div className={styles.container}>
       <span className={styles.title}>Add Your Document</span>
       <span className={styles.subTitle}>
@@ -41,5 +52,12 @@ export default function AddYours() {
         </div>
       </div>
     </div>
-  );
+  ) : (
+    chosen === "Research Paper" && (
+        <ResearchPaper setChosen={setChosen}/>
+    )
+  ):
+  <div>
+
+  </div>
 }

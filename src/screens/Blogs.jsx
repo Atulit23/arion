@@ -58,14 +58,15 @@ export default function Blogs() {
   console.log(userData);
 
   const getUserDocs = async (userId) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     try {
       const res = await axios.get(
         `http://localhost:8000/documents/getPrivateDocumentsByUserId?userId=${userId}`,
-        { 
+        {
           headers: { Authorization: `Bearer ${token}` },
-          withCredentials: true 
-        }      );
+          withCredentials: true,
+        }
+      );
       console.log(res.data);
       setBlogData(res.data?.documents);
     } catch (err) {
@@ -85,9 +86,11 @@ export default function Blogs() {
           <span>Blogs</span>
         </div>
         <div className="cards">
-          {blogData?.filter((elem) => elem?.type === "blog")?.map((item) => {
-            return <CurrentCard data={item} />;
-          })}
+          {blogData
+            ?.filter((elem) => elem?.type === "blog")
+            ?.map((item) => {
+              return <CurrentCard data={item} />;
+            })}
         </div>
       </div>
     </div>
