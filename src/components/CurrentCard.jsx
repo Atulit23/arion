@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { choose, storeCurrentData } from "../redux/slices/appSlice";
+import styles from '../css/card.module.css'
 
 export default function CurrentCard({ data }) {
   const navigate = useNavigate();
@@ -18,19 +19,19 @@ export default function CurrentCard({ data }) {
   }, [data?.questions]);
 
   return (
-    <div className="card">
-      <div className="main__title">{data?.type?.toUpperCase()}</div>
-      <div className="sub__title">{data?.title}</div>
-      <div className="tqdm__main">
-        <div className="tqdm__outer">
+    <div className={styles.card}>
+      <div className={styles.main__title}>{data?.type?.toUpperCase()}</div>
+      <div className={styles.sub__title}>{data?.title}</div>
+      <div className={styles.tqdm__main}>
+        <div className={styles.tqdm__outer}>
           <div
-            className="tqdm__inner"
+            className={styles.tqdm__inner}
             style={{ width: `${(10 / 20) * 100}%` }}
           ></div>
         </div>
       </div>
       <div
-        className="start"
+        className={styles.start}
         onClick={() => {
           dispatch(choose(data));
           navigate("/learn");

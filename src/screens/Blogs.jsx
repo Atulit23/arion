@@ -77,7 +77,6 @@ export default function Blogs() {
   useEffect(() => {
     getUserDocs(userData?._id);
   }, [userData]);
-  console.log("Cookies:", document.cookie);
 
   return (
     <div className="main__container">

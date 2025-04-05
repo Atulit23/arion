@@ -1,0 +1,57 @@
+
+.card {
+    background-color: hsl(var(--muted));
+    width: 50%;
+    border-radius: 16px;
+    padding: 1.4rem 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .main__title {
+    color: hsl(var(--muted-foreground));
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .sub__title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
+  }
+  
+  .tqdm__main {
+    width: 80%;
+    margin-top: 1.5rem;
+  }
+  
+  .tqdm__outer {
+    width: 100%;
+    background-color: #131f24;
+    border-radius: 10px;
+    padding: 2px;
+    height: 24px;
+  }
+  
+  .tqdm__inner {
+    height: 100%;
+    background-color: #93d333;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .start {
+    background-color: #1cb0f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.9rem;
+    width: 45%;
+    margin-top: 2rem;
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../css/yours.module.css";
 import book from "../icons/book.png";
 import upload from "../icons/upload.png";
-import ResearchPaper from "../components/ResearchPaper";
+import AddDocument from "../components/AddDocument";
 
 export default function AddYours() {
   const [chosen, setChosen] = useState("");
@@ -53,8 +53,8 @@ export default function AddYours() {
       </div>
     </div>
   ) : (
-    chosen === "Research Paper" && (
-        <ResearchPaper setChosen={setChosen}/>
+    chosen !== "" && (
+        <AddDocument setChosen={setChosen} chosen={chosen}/>
     )
   ):
   <div>

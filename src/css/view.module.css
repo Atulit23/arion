@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 10rem;
+  width: 81%;
+  align-items: center;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 2px solid #52656d;
+  width: 50%;
+  padding: 0.5rem 1rem;
+}
+
+.header > span {
+  color: #52656d;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cards {
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 90vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
