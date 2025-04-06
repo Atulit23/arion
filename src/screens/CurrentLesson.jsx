@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../css/learn.css";
 import Back from "../icons/back.png";
 import "mathjax/es5/tex-mml-chtml";
+import axios from "axios";
+import { choose } from "../redux/slices/appSlice";
 
 export default function CurrentLesson() {
   const navigate = useNavigate();
@@ -11,13 +13,44 @@ export default function CurrentLesson() {
   const chosen = useSelector((state) => state.app.chosen);
   const level = useSelector((state) => state.app.level);
   const [data, setData] = useState([]);
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    fetch(`/data/${chosen?.level}`) 
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error("Error loading JSON:", error));
-  }, [chosen?.level]);
+    fetch(chosen?.levelDocumentUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((json) => setData(json))
+    .catch((error) => console.error("Error loading JSON:", error));
+  }, [chosen]);
+
+  const updateProgress = async () => {
+    setCurrentLevel(currentLevel + 1);
+    
+    let arr = [...chosen?.levelsCompleted]
+    arr.push(currentLevel + 1)
+    arr = [...new Set(arr)];
+
+    const token = localStorage.getItem("token");
+
+    try {
+      const res = await axios.post(
+        `http://localhost:8000/documents/update`,
+        {levelsCompleted: arr, id: chosen._id},
+        {
+          headers: { Authorization: `Bearer ${token}` },
+          withCredentials: true,
+        }
+      );
+      console.log(res.data);
+      dispatch(choose(res?.data?.document))
+    } catch (err) {
+      console.log(err)  
+    }
+  }
 
   useEffect(() => {
     setCurrentLevel(level);
@@ -25,38 +58,7 @@ export default function CurrentLesson() {
 
   const LevelContent = ({ data, currentLevel }) => {
     const content = data[Object.keys(data)[currentLevel]]?.content || "";
-
-    // const bulletPoints = content
-    //   .replace(/e\.g\./g, "EG_PLACEHOLDER")
-    //   .replace(/e\.g\.,/g, "EG_COMMA_PLACEHOLDER")
-    //   .replace(/i\.e\./g, "IE_PLACEHOLDER")
-    //   .replace(/i\.e\.,/g, "IE_COMMA_PLACEHOLDER")
-    //   .replace(/etc\./g, "ETC_PLACEHOLDER")
-    //   .replace(/vs\./g, "VS_PLACEHOLDER")
-    //   .replace(/fig\./g, "FIG_PLACEHOLDER")
-    //   .replace(/eq\./g, "EQ_PLACEHOLDER")
-    //   .replace(/cf\./g, "CF_PLACEHOLDER")
-    //   .replace(/no\./g, "NO_PLACEHOLDER")
-    //   .replace(/p\./g, "P_PLACEHOLDER")
-    //   .replace(/pp\./g, "PP_PLACEHOLDER")
-    //   .split(/\.(?!\d)/)
-    //   .map((point) =>
-    //     point
-    //       .replace(/EG_PLACEHOLDER/g, "e.g.")
-    //       .replace(/EG_COMMA_PLACEHOLDER/g, "e.g.,")
-    //       .replace(/IE_PLACEHOLDER/g, "i.e.")
-    //       .replace(/IE_COMMA_PLACEHOLDER/g, "i.e.,")
-    //       .replace(/ETC_PLACEHOLDER/g, "etc.")
-    //       .replace(/VS_PLACEHOLDER/g, "vs.")
-    //       .replace(/FIG_PLACEHOLDER/g, "fig.")
-    //       .replace(/EQ_PLACEHOLDER/g, "eq.")
-    //       .replace(/CF_PLACEHOLDER/g, "cf.")
-    //       .replace(/NO_PLACEHOLDER/g, "no.")
-    //       .replace(/P_PLACEHOLDER/g, "p.")
-    //       .replace(/PP_PLACEHOLDER/g, "pp.")
-    //       .trim()
-    //   )
-    //   .filter((point) => point !== "");
+    console.log(content)
 
     const bulletPoints = (() => {
       let protectedContent = content;
@@ -148,7 +150,7 @@ export default function CurrentLesson() {
     <div className="current__lesson">
       <div className="current__lesson__middle">
         <div className="current__lesson__top">
-          <div className="cross" onClick={() => navigate("/learn")}>
+          <div className="cross" onClick={() => navigate(-1)}>
             <img src={Back} alt="" />
           </div>
           <div className="tqdm__main__c">
@@ -182,8 +184,9 @@ export default function CurrentLesson() {
         </div>
         <div className="next" onClick={() => {
             if (currentLevel < Object.keys(data).length - 1) {
-              setCurrentLevel(currentLevel + 1);
+              updateProgress()
             } else {
+              updateProgress()
               navigate('/take-quiz')
             }
           }}>

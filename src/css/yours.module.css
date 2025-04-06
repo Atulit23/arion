@@ -302,3 +302,36 @@
   justify-content: center;
   align-items: center;
 }
+
+.done {
+  flex-direction: column;
+  width: 100%;
+  height: 79vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.take {
+  background-color: #93d333;
+  padding: 1rem 1rem 0.9rem 1rem;
+  width: 13em;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.take > span {
+  color: black;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.done__text {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}

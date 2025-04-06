@@ -3,7 +3,9 @@ import styles from "../css/yours.module.css";
 import upload from "../icons/upload.png";
 import Loader from "./Loader";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { choose } from "../redux/slices/appSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function AddDocument({ setChosen, chosen }) {
   const [name, setName] = useState("");
@@ -11,6 +13,9 @@ export default function AddDocument({ setChosen, chosen }) {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const userData = useSelector((state) => state.app.userData);
+  const [data, setData] = useState([])
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   console.log(file);
 
   const uploadFile = async () => {
@@ -30,6 +35,7 @@ export default function AddDocument({ setChosen, chosen }) {
           withCredentials: true,
         }
       );
+      setData(res.data?.privateDoc)
       console.log(res.data);
       setLoading(false);
       setDone(true);
@@ -40,12 +46,12 @@ export default function AddDocument({ setChosen, chosen }) {
 
   return (
     <div className={styles.container}>
-      <span className={styles.title}>
+      {done === false && <span className={styles.title}>
         {chosen === "Research Paper" ? "Add a Research Paper" : "Add a Book"}
-      </span>
-      <span className={styles.subTitle}>
+      </span>}
+      {done === false && <span className={styles.subTitle}>
         Please give a unique name and upload the file in pdf format
-      </span>
+      </span>}
       {/* <div className={styles.go__back}>Go back</div> */}
       {loading === false && done === false && (
         <div className={styles.sub}>
@@ -105,6 +111,17 @@ export default function AddDocument({ setChosen, chosen }) {
         </div>
       )}
       {loading === true && done === false && <Loader />}
+      {loading === false && done === true && (
+        <div className={styles.done}>
+          <span className={styles.done__text}>All done! Your Research Paper is ready!</span>
+          <div className={styles.take} onClick={() => {
+            dispatch(choose(data))
+            navigate('/research-papers/learn')
+          }}>
+            <span>ACCESS NOW</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

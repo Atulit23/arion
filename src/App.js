@@ -41,6 +41,7 @@ function App() {
         <Route path="/results" element={<GetResults />} />
         <Route path="/add-yours" element={<AddYours />} />
         <Route path="/research-papers" element={<ViewResearchPapers />} />
+        <Route path="/research-papers/learn" element={<Learn />} />
       </Routes>
     </div>
   );

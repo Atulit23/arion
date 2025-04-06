@@ -10,15 +10,20 @@ import { chooseLevel } from "../redux/slices/appSlice";
 export default function Learn() {
   const chosen = useSelector((state) => state.app.chosen);
   const [data, setData] = useState([]);
-
+  console.log(chosen)
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`/data/${chosen?.level}`) 
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error("Error loading JSON:", error));
-  }, [chosen?.level]);
+    fetch(chosen?.levelDocumentUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((json) => setData(json))
+    .catch((error) => console.error("Error loading JSON:", error));
+  }, [chosen]);
 
   console.log(data);
   console.log(chosen);
@@ -35,7 +40,7 @@ export default function Learn() {
               src={BackTeal}
               alt=""
               onClick={() => {
-                navigate("/blogs");
+                navigate(-1);
               }}
             />
             <span>{chosen?.type?.toUpperCase()}</span>
@@ -48,7 +53,7 @@ export default function Learn() {
           return (
             <div className="current__level">
               {/* there will be two buttons, play & tick */}
-              {(index + 1) % 567890 === 0 ? (
+              {chosen?.levelsCompleted?.includes(index+1) ? (
                 <div
                   className="active__button"
                   onClick={() => {
@@ -74,7 +79,7 @@ export default function Learn() {
           );
         })}
         <div className="current__level">
-          {isTaken ? (
+          {chosen?.quizTaken ? (
             <div
               className="active__button"
               onClick={() => {

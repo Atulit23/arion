@@ -33,13 +33,17 @@ export default function ViewResearchPapers() {
     <div className={styles.container}>
       <div className={styles.middle}>
         <div className={styles.header}>
-          <span>Blogs</span>
+          <span>Research Papers</span>
         </div>
         <div className={styles.cards}>
           {blogData
             ?.filter((elem) => elem?.type === "Research Paper")
             ?.map((item) => {
-              return <CurrentCard data={item} />;
+              return (
+                <>
+                <CurrentCard data={item} route={"research-papers"}/>
+                </>
+              )
             })}
         </div>
       </div>

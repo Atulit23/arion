@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Back from "../icons/back.png";
 import SmallPlay from "../icons/small_play.png";
+import axios from "axios"
+import { choose } from "../redux/slices/appSlice";
 
 export default function GetResults() {
   const answers = useSelector((state) => state.app.answers);
@@ -16,8 +18,6 @@ export default function GetResults() {
 
   console.log(answers);
 
-  
-
   const computeScores = () => {
     let newScores = {};
     let newTotalScore = 0;
@@ -26,7 +26,6 @@ export default function GetResults() {
     let dataKeys = Object.keys(data);
     let dataValues = Object.values(data);
     let answerValues = Object.values(answers);
-
     for (let i = 0; i < dataKeys.length; i++) {
       let currentScore = {
         total: dataValues[i].length,
@@ -59,13 +58,44 @@ export default function GetResults() {
     computeScores();
   }, [data, answers]);
 
+  const dispatch = useDispatch()
+
+  const storeResults = async () => {
+    let obj = {
+      id: chosen?._id,
+      quizTaken: true,
+      quizResults: [scores],
+      numQuizScore: finalScore,
+    }
+    const token = localStorage.getItem("token");
+
+    try {
+      const res = await axios.post(
+        `http://localhost:8000/documents/update`,
+        obj,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+          withCredentials: true,
+        }
+      );
+      console.log(res.data);
+      dispatch(choose(res?.data?.document))
+    } catch (err) {
+      console.log(err)  
+    }
+  }
+
+  useEffect(() => {
+    storeResults()
+  }, [scores])
+
   console.log(scores);
 
   return (
     <div className={styles.container}>
       <div className={styles.middle}>
         <div className={styles.current__lesson__top}>
-          <div className={styles.cross} onClick={() => navigate("/learn")}>
+          <div className={styles.cross} onClick={() => navigate("/blogs")}>
             <img src={Back} alt="" />
           </div>
           <div className={styles.tqdm__main__c}>

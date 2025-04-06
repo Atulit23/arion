@@ -11,8 +11,21 @@ export default function TakeQuiz() {
   const [current, setCurrent] = useState({});
   const chosen = useSelector((state) => state.app.chosen);
   const [selected, setSelected] = useState({});
-  const data = useSelector((state) => state.app.currentData);
+  // const data = useSelector((state) => state.app.currentData);
+  const [data, setData] = useState([]);
   const [leftOffset, setLeftOffset] = useState(0);
+
+  useEffect(() => {
+    fetch(chosen?.quizDocumentUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((json) => setData(json))
+      .catch((error) => console.error("Error loading JSON:", error));
+  }, [chosen]);
 
   const dispatch = useDispatch();
 
@@ -24,12 +37,11 @@ export default function TakeQuiz() {
     if (cq && co) {
       const cqRect = cq.getBoundingClientRect();
       const coRect = co.getBoundingClientRect();
-      const newLeft = cqRect.left - coRect.left
+      const newLeft = cqRect.left - coRect.left;
       console.log(newLeft);
       setLeftOffset(newLeft);
     }
   }, []);
-
 
   useEffect(() => {
     if (Object.keys(data)?.length > 0) {
@@ -43,7 +55,7 @@ export default function TakeQuiz() {
     <div className={styles.container}>
       <div className={styles.middle}>
         <div className={styles.current__lesson__top}>
-          <div className={styles.cross} onClick={() => navigate("/learn")}>
+          <div className={styles.cross} onClick={() => navigate(-1)}>
             <img src={Back} alt="" />
           </div>
           <div className={styles.tqdm__main__c}>
@@ -159,8 +171,8 @@ export default function TakeQuiz() {
               currentQuestion ===
                 data[Object.keys(data)[currentLevel]]?.length - 1
             ) {
-              navigate("/results");
               dispatch(storeAnswers(selected));
+              navigate('/results');
             }
           }}
         >

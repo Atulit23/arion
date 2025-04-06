@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "../css/yours.module.css";
 import book from "../icons/book.png";
+import actual_blogs from "../icons/actual_blogs.png";
+import blogs from "../icons/blogs.png";
 import upload from "../icons/upload.png";
 import AddDocument from "../components/AddDocument";
 
@@ -38,7 +40,7 @@ export default function AddYours() {
             setChosen("Research Paper");
           }}
         >
-          <img src={book} alt="" />
+          <img src={blogs} alt="" />
           <span>Research Papers</span>
         </div>
         <div
@@ -47,7 +49,7 @@ export default function AddYours() {
             setChosen("Blog");
           }}
         >
-          <img src={book} alt="" />
+          <img src={actual_blogs} alt="" />
           <span>Blogs</span>
         </div>
       </div>
