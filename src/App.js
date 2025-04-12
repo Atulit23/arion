@@ -19,6 +19,7 @@ import { ToastContainer } from "react-toastify";
 import AddYours from "./screens/AddYours";
 import ViewResearchPapers from "./screens/ViewResearchPapers";
 import 'react-tooltip/dist/react-tooltip.css'
+import ViewBooks from "./screens/ViewBooks";
 
 function App() {
   useEffect(() => {
@@ -39,10 +40,12 @@ function App() {
         <Route path="/learn" element={<Learn />} />
         <Route path="/current" element={<CurrentLesson />} />
         <Route path="/take-quiz" element={<TakeQuiz />} />
+        <Route path="/books" element={<ViewBooks />} />
         <Route path="/results" element={<GetResults />} />
         <Route path="/add-yours" element={<AddYours />} />
         <Route path="/research-papers" element={<ViewResearchPapers />} />
         <Route path="/research-papers/learn" element={<Learn />} />
+        <Route path="/books/learn" element={<Learn />} />
       </Routes>
     </div>
   );

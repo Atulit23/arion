@@ -3,7 +3,8 @@ import styles from "../css/quiz.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Back from "../icons/back.png";
-import { storeAnswers } from "../redux/slices/appSlice";
+import { choose, storeAnswers } from "../redux/slices/appSlice";
+import axios from "axios";
 
 export default function TakeQuiz() {
   const [currentLevel, setCurrentLevel] = useState(0);
@@ -14,6 +15,7 @@ export default function TakeQuiz() {
   // const data = useSelector((state) => state.app.currentData);
   const [data, setData] = useState([]);
   const [leftOffset, setLeftOffset] = useState(0);
+  const [scores, setScores] = useState({}); // score, level & question numbers of the incorrect ones
 
   useEffect(() => {
     fetch(chosen?.quizDocumentUrl)
@@ -43,11 +45,76 @@ export default function TakeQuiz() {
     }
   }, []);
 
+  const computeScores = (answers) => {
+    let newScores = {};
+    let newTotalScore = 0;
+    let newFinalScore = 0;
+
+    let dataKeys = Object.keys(data);
+    let dataValues = Object.values(data);
+    let answerValues = Object.values(answers);
+
+    console.log(dataKeys);
+    console.log(answerValues);
+
+    for (let i = 0; i < dataKeys.length; i++) {
+      let currentScore = {
+        total: dataValues[i].length,
+        score: 0,
+        incorrectAnwers: [],
+        collapsed: false,
+      };
+      dataValues[i]?.map((item, index) => {
+        if (answerValues[i] && item?.answer === answerValues[i][index]) {
+          currentScore.score = currentScore.score + 1;
+        } else {
+          currentScore.incorrectAnwers.push(item);
+        }
+      });
+      newScores[dataKeys[i]] = currentScore;
+    }
+
+    Object.values(newScores).map((item, index) => {
+      newTotalScore += item?.total;
+      newFinalScore += item?.score;
+    });
+
+    setScores(newScores);
+    dispatch(storeAnswers({scores: newScores, answers: selected}))
+    storeResults(newFinalScore, newScores)
+  };
+
   useEffect(() => {
     if (Object.keys(data)?.length > 0) {
       setCurrent(data[Object.keys(data)[currentLevel]][currentQuestion]);
     }
   }, [data, currentLevel, currentQuestion]);
+
+  const storeResults = async (finalScore, scores) => {
+    let obj = {
+      id: chosen?._id,
+      quizTaken: true,
+      quizResults: [scores],
+      numQuizScore: finalScore,
+    };
+    const token = localStorage.getItem("token");
+
+    try {
+      const res = await axios.post(
+        `http://localhost:8000/documents/update`,
+        obj,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+          withCredentials: true,
+        }
+      );
+      console.log(res.data);
+      dispatch(choose(res?.data?.document));
+      navigate('/results');
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   // const current = data[Object.k/eys(data)[currentLevel]]?.[currentQuestion] || {};
 
@@ -171,8 +238,9 @@ export default function TakeQuiz() {
               currentQuestion ===
                 data[Object.keys(data)[currentLevel]]?.length - 1
             ) {
-              dispatch(storeAnswers(selected));
-              navigate('/results');
+              // dispatch(storeAnswers(selected));
+              // navigate('/results');
+              computeScores(selected)
             }
           }}
         >

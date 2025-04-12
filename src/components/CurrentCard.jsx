@@ -19,6 +19,9 @@ export default function CurrentCard({ data, route }) {
     })
     .then((json) => {
       dispatch(storeCurrentData(json));
+      console.log(route)
+      console.log(`/${route}/learn`)
+      navigate(`/${route}/learn`);
     })
     .catch((error) => console.error("Error loading JSON:", error));
   }
@@ -46,7 +49,6 @@ export default function CurrentCard({ data, route }) {
         onClick={() => {
           dispatch(choose(data));
           updateQuestions()
-          navigate(`/${route}/learn`);
         }}
       >
         <span>START</span>

@@ -27,7 +27,7 @@ export default function CurrentLesson() {
     .catch((error) => console.error("Error loading JSON:", error));
   }, [chosen]);
 
-  const updateProgress = async () => {
+  const updateProgress = async (should) => {
     setCurrentLevel(currentLevel + 1);
     
     let arr = [...chosen?.levelsCompleted]
@@ -47,6 +47,9 @@ export default function CurrentLesson() {
       );
       console.log(res.data);
       dispatch(choose(res?.data?.document))
+      if(should) {
+        navigate('/take-quiz')
+      }
     } catch (err) {
       console.log(err)  
     }
@@ -186,8 +189,7 @@ export default function CurrentLesson() {
             if (currentLevel < Object.keys(data).length - 1) {
               updateProgress()
             } else {
-              updateProgress()
-              navigate('/take-quiz')
+              updateProgress(true)
             }
           }}>
           <span>{currentLevel < (Object.keys(data).length - 1) ? 'NEXT' : 'TAKE QUIZ'}</span>

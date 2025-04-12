@@ -113,10 +113,14 @@ export default function AddDocument({ setChosen, chosen }) {
       {loading === true && done === false && <Loader />}
       {loading === false && done === true && (
         <div className={styles.done}>
-          <span className={styles.done__text}>All done! Your Research Paper is ready!</span>
+          <span className={styles.done__text}>{chosen === "Research Paper" ?'All done! Your Research Paper is ready!' : 'All done! Your Book is ready!'}</span>
           <div className={styles.take} onClick={() => {
             dispatch(choose(data))
-            navigate('/research-papers/learn')
+            if(chosen === "Research Paper") {
+              navigate('/research-papers/learn')
+            } else {
+              navigate('/books/learn')
+            }
           }}>
             <span>ACCESS NOW</span>
           </div>
