@@ -1,3 +1,11 @@
+.sidebar {
+  width: 15.5%;
+  padding: 1.5rem 0.4rem;
+  border-right: 1px solid #37464f;
+  height: 100vh;
+  background-color: hsl(var(--backgroundLight));
+}
+
 .logo > span {
   font-family: "Chewy", system-ui;
   font-weight: 600;
@@ -13,13 +21,16 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-left: -1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  justify-content: center;
+  margin-left: -3rem;
 }
 
 .logo > img {
-  width: 6rem;
-  height: 4.6rem;
+  width: 5rem;
+  height: 3.5rem;
+  cursor: pointer;
 }
 
 .main__container {
@@ -29,23 +40,18 @@
   height: 100vh;
 }
 
-.sidebar {
-  width: 18%;
-  padding: 3.2rem 2.1rem;
-  border-right: 1px solid #37464f;
-  height: 100vh;
-  background-color: hsl(var(--backgroundLight));
-}
-
 .active {
   display: flex;
   align-items: center;
-  padding: 0.6rem 1.1rem;
+  padding: 0.8rem 1.1rem;
   background-color: hsl(var(--muted));
   border: 2px solid hsl(var(--muted-foreground));
   border-radius: 0.8rem;
-  margin-top: 0.7rem;
   cursor: pointer;
+  width: 90%;
+  margin: auto;
+  margin-top: 0.7rem;
+  /* justify-content: center; */
 }
 
 .active > span {
@@ -58,10 +64,13 @@
 .inactive {
   display: flex;
   align-items: center;
-  padding: 0.7rem 1.2rem;
+  padding: 0.8rem 1.1rem;
   border-radius: 0.8rem;
-  margin-top: 0.7rem;
   cursor: pointer;
+  width: 90%;
+  margin: auto;
+  margin-top: 0.7rem;
+  /* justify-content: center; */
 }
 
 .inactive > span {
@@ -160,4 +169,10 @@
   padding: 0.9rem 1rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.learn__img {
+  width: 1.8rem;
+  max-width: max-content;
+    /* height: 2rem; */
 }

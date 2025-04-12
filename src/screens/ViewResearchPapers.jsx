@@ -3,6 +3,7 @@ import styles from "../css/view.module.css";
 import CurrentCard from "../components/CurrentCard";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function ViewResearchPapers() {
   const userData = useSelector((state) => state.app.userData);
@@ -32,8 +33,16 @@ export default function ViewResearchPapers() {
   return (
     <div className={styles.container}>
       <div className={styles.middle}>
-        <div className={styles.header}>
-          <span>Research Papers</span>
+        <div className={styles.header__main}>
+          <input placeholder="Research Papers" className={styles.header} />
+          <div className={styles.profile}>
+            {userData?.username && (
+              <div className={styles.icon}>
+                {userData?.username[0]?.toUpperCase()}
+              </div>
+            )}
+            <FaChevronDown className={styles.down}/>
+          </div>
         </div>
         <div className={styles.cards}>
           {blogData
@@ -41,9 +50,9 @@ export default function ViewResearchPapers() {
             ?.map((item) => {
               return (
                 <>
-                <CurrentCard data={item} route={"research-papers"}/>
+                  <CurrentCard data={item} route={"research-papers"} />
                 </>
-              )
+              );
             })}
         </div>
       </div>
